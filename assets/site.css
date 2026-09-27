@@ -740,3 +740,11 @@ html:not([lang="ko"]) .hero-ask{letter-spacing:-.01em}
 .hero-ask{margin:44px 0 14px}
 .hero .fhint{margin-bottom:0}
 @media (max-width:680px){.hero-ask{margin:32px 0 10px}}
+.bp-pts{grid-template-columns:repeat(4,1fr);max-width:1040px}
+.bp-pts li{padding:14px 14px;gap:10px}
+.bp-pts b{font-size:16px}
+@media (max-width:1100px){.bp-pts{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){.bp-pts{grid-template-columns:1fr}}
+button.fi[data-ind="edu"]{--ic:#6D28D9;--is:#F1EBFF}
+@media (max-width:680px){.fields{gap:4px}button.fi{padding:0 7px;gap:3px;font-size:12.5px}.fi svg{width:13px;height:13px}}
+@media (max-width:680px){.hero .fields{display:grid;grid-template-columns:repeat(3,auto);justify-content:center;gap:6px}button.fi{justify-content:center;padding:0 12px;font-size:13px}}
