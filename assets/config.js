@@ -8,17 +8,19 @@ window.SITE = {
      (알림 메일은 apps-script.txt 의 NOTIFY 로만 감) */
   email: '',
 
-  /* 무료 30분 상담 예약 페이지 주소
+  /* 30분 화상 상담 예약 페이지 주소 (상담비 결제 후 고르는 곳)
      구글 캘린더 "예약 일정(Appointment schedule)" 공개 링크, 또는 Calendly · Cal.com 링크 */
   bookingUrl: '',
 
   /* 의뢰서가 저장될 주소: apps-script.txt 를 구글 Apps Script 로 배포한 웹앱 주소 (…/exec) */
   formEndpoint: '',
 
-  /* 운영 진단 250만 원 결제 링크 */
+  /* 결제 링크: 비워 두면 "준비 중"으로 표시되고 의뢰서로 안내 */
   pay: {
-    krCard: '',   // 국내 카드: 페이앱 · 토스페이먼츠 링크페이 등에서 만든 결제 링크
-    paypal: ''    // 해외: PayPal 결제 링크 (paypal.com/ncp/payment/… 또는 paypal.me/…)
+    callCard: '',    // 30분 화상 상담 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)
+    callPaypal: '',  // 30분 화상 상담 20만 원 · 해외 PayPal 결제 링크
+    krCard: '',      // 운영 진단 300만 원 · 국내 카드 결제 링크
+    paypal: ''       // 운영 진단 300만 원 · 해외 PayPal 결제 링크 (paypal.com/ncp/payment/… 또는 paypal.me/…)
   },
 
   /* 사업자 정보 (카드 결제 심사와 전자상거래법상 사이트 아래에 표시해야 함) */

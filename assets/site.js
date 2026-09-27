@@ -11,6 +11,7 @@
     $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.l === l ? 'true' : 'false'); });
     var t = document.body.dataset['title' + (l === 'ko' ? 'Ko' : 'En')];
     if (t) document.title = t;
+    $$('option[data-en]').forEach(function (o) { o.innerHTML = o.dataset[l === 'ko' ? 'ko' : 'en']; });
   }
   $$('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.l); }); });
   setLang(ko() ? 'ko' : 'en');
@@ -40,12 +41,14 @@
     $$(sel).forEach(function (a) {
       if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; a.classList.remove('off'); }
       else {
-        a.href = 'request.html?type=' + fallbackType + (a.dataset.method ? '&pay=' + a.dataset.method : '');
+        a.href = 'request.html?type=' + (a.dataset.type || fallbackType) + (a.dataset.method ? '&pay=' + a.dataset.method : '');
         a.classList.add('off');
         var n = a.querySelector('.soon'); if (n) n.hidden = false;
       }
     });
   }
+  wire('[data-pay="callCard"]', (S.pay || {}).callCard, 'call');
+  wire('[data-pay="callPaypal"]', (S.pay || {}).callPaypal, 'call');
   wire('[data-pay="krCard"]', (S.pay || {}).krCard, 'diagnosis');
   wire('[data-pay="paypal"]', (S.pay || {}).paypal, 'diagnosis');
   wire('[data-book]', S.bookingUrl, 'call');
