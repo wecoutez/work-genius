@@ -772,3 +772,4 @@ u.ul{text-decoration:underline;text-decoration-color:var(--blue);text-decoration
 .sl-days .sl-c{min-width:0;padding:6px 2px;scroll-snap-align:start}
 .sl-days .sl-c:not(.sl-later){grid-row:2}
 .sl-days .sl-c.sl-later{grid-row:1;grid-column:1/span 6;justify-self:start;padding:8px 14px}
+.nl-q b br.keep{display:inline}
