@@ -719,3 +719,25 @@ html:not([lang="ko"]) .nl-q b{letter-spacing:-.01em}
 .hero-ask{font-size:clamp(20px,2.2vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1.4;color:var(--ink2);margin-bottom:22px}
 html:not([lang="ko"]) .hero-ask{letter-spacing:-.01em}
 @media (max-width:680px){.hero-ask{font-size:19px;margin-bottom:16px}}
+.hb-say{position:absolute;z-index:3;font-size:12.5px;font-weight:800;color:var(--ink);background:#fff;border-radius:14px;padding:7px 11px;white-space:nowrap;box-shadow:0 12px 26px -12px rgba(12,22,52,.45);animation:say 3.6s ease-in-out infinite}
+.hb-say:after{content:"";position:absolute;width:10px;height:10px;background:#fff;transform:rotate(45deg)}
+.hb-say.s1{transform:translate(-100%,-150%);border-bottom-right-radius:4px}.hb-say.s1:after{right:10px;bottom:-4px}
+.hb-say.s2{transform:translate(0,110%);border-top-left-radius:4px;color:#157347}.hb-say.s2:after{left:10px;top:-4px}
+.hb-say.s3{transform:translate(18%,-40%);border-bottom-left-radius:4px;color:var(--blue-d)}.hb-say.s3:after{left:-4px;bottom:8px}
+.hb-say.s1{color:#157347}
+.hb-say.s2{animation-delay:1.2s}.hb-say.s3{animation-delay:2.4s}
+@keyframes say{0%,100%{margin-top:0}50%{margin-top:-4px}}
+@media (prefers-reduced-motion:reduce){.hb-say{animation:none}}
+@media (max-width:680px){.hb-say{font-size:11px;padding:5px 8px}.hb-say.s3{display:none}}
+.hb-say.s1{transform:translate(-100%,-50%);border-radius:14px 14px 4px 14px}.hb-say.s1:after{right:14px;bottom:-4px;left:auto;top:auto}
+.hb-say.s2{transform:translate(34%,-50%);border-radius:14px 14px 14px 4px}.hb-say.s2:after{left:-3px;bottom:6px;top:auto}
+.hb-say.s3{transform:translate(-118%,-50%);border-radius:14px 14px 4px 14px}.hb-say.s3:after{right:-3px;left:auto;bottom:6px}
+@media (max-width:680px){.hb-say.s1{top:15%!important;left:100%!important}.hb-say.s2{transform:translate(28%,-50%)}}
+@media (max-width:680px){.hb-say.s1{top:20.5%!important}.hb-say.s2{transform:translate(-128%,-50%);border-radius:14px 14px 4px 14px}.hb-say.s2:after{left:auto;right:-3px}}
+.hb-says-m{display:none}
+@media (max-width:680px){
+  .hub .hb-say{display:none}
+  .hb-says-m{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin:6px 0 4px}
+  .hb-says-m>span{font-size:13px;font-weight:800;color:#157347;background:#fff;border-radius:14px 14px 14px 4px;padding:8px 12px;box-shadow:0 10px 22px -12px rgba(12,22,52,.45)}
+  .hb-says-m>span:last-child{align-self:flex-end;border-radius:14px 14px 4px 14px}
+}
