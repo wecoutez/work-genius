@@ -4,17 +4,9 @@
   var $$ = function (q, r) { return Array.prototype.slice.call((r || document).querySelectorAll(q)); };
   var ko = function () { return document.documentElement.lang === 'ko'; };
 
-  /* 언어 전환 */
-  function setLang(l) {
-    document.documentElement.lang = l;
-    try { localStorage.setItem('tdh-lang', l); } catch (e) {}
-    $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.l === l ? 'true' : 'false'); });
-    var t = document.body.dataset['title' + (l === 'ko' ? 'Ko' : 'En')];
-    if (t) document.title = t;
-    $$('option[data-en]').forEach(function (o) { o.innerHTML = o.dataset[l === 'ko' ? 'ko' : 'en']; });
-  }
-  $$('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.l); }); });
-  setLang(ko() ? 'ko' : 'en');
+  /* 언어: 영문은 /, 국문은 /kr/ 주소로 나뉨 */
+  var l0 = ko() ? 'ko' : 'en';
+  $$('option[data-en]').forEach(function (o) { o.innerHTML = o.dataset[l0]; });
 
   /* 메일 주소 · 복사 */
   $$('[data-email]').forEach(function (el) { el.textContent = S.email || ''; });
