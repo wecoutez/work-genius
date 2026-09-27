@@ -11,8 +11,8 @@
   var QA = [
     { id: 'price', q: t('가격이 얼마예요?', 'How much does it cost?'),
       k: ['가격', '비용', '얼마', '금액', '견적', '패키지', 'price', 'cost', 'how much', 'quote', 'package'],
-      a: t('단계별 금액이에요 (부가세 별도).<br>· 30분 화상 상담 <b>20만 원</b><br>· 운영 진단 <b>300만 원</b><br>· 팀장님 패키지 <b>1,800만 원~</b><br>· 확장 패키지 <b>3,000만 원~</b><br>· 월간 수정 구독 <b>월 50만 원</b> (10건까지, 선택)<br><br>상담 후 30일 안에 진단을 계약하면 상담비를, 진단 후 60일 안에 제작을 계약하면 진단비를 빼 드려요.',
-           'Prices by stage (taxes excluded):<br>· 30-minute video call <b>$150</b><br>· Operations diagnosis <b>$2,200</b><br>· Team lead package <b>from $13,000</b><br>· Expansion package <b>from $22,000</b><br>· Monthly edit subscription <b>$360/mo</b> (up to 10 edits, optional)<br><br>Book the diagnosis within 30 days of the call and the call fee is deducted; build within 60 days of the diagnosis and the diagnosis fee is deducted.'),
+      a: t('단계별 금액이에요 (부가세 별도).<br>· 화상 상담 (30분~1시간) <b>20만 원</b><br>· 운영 진단 <b>300만 원</b><br>· 팀장님 패키지 <b>1,800만 원~</b><br>· 확장 패키지 <b>3,000만 원~</b><br>· 월간 수정 구독 <b>월 50만 원</b> (10건까지, 선택)<br><br>상담 후 30일 안에 진단을 계약하면 상담비를, 진단 후 60일 안에 제작을 계약하면 진단비를 빼 드려요.',
+           'Prices by stage (taxes excluded):<br>· Video call (30–60 min) <b>$150</b><br>· Operations diagnosis <b>$2,200</b><br>· Team lead package <b>from $13,000</b><br>· Expansion package <b>from $22,000</b><br>· Monthly edit subscription <b>$360/mo</b> (up to 10 edits, optional)<br><br>Book the diagnosis within 30 days of the call and the call fee is deducted; build within 60 days of the diagnosis and the diagnosis fee is deducted.'),
       link: ['pricing.html', t('가격 자세히 보기', 'See pricing')] },
     { id: 'process', q: t('어떻게 진행돼요? 기간은요?', 'How does it work, and how long?'),
       k: ['진행', '기간', '얼마나 걸', '일정', '방문', '몇 주', 'process', 'how long', 'timeline', 'weeks', 'visit'],

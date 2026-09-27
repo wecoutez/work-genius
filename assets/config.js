@@ -23,7 +23,7 @@ window.SITE = {
     off: []
   },
 
-  /* 30분 화상 상담 예약 페이지 주소 (상담비 결제 후 고르는 곳)
+  /* 화상 상담 (30분~1시간) 예약 페이지 주소 (상담비 결제 후 고르는 곳)
      구글 캘린더 "예약 일정(Appointment schedule)" 공개 링크, 또는 Calendly · Cal.com 링크 */
   bookingUrl: '',
 
@@ -32,8 +32,8 @@ window.SITE = {
 
   /* 결제 링크: 비워 두면 "준비 중"으로 표시되고 의뢰서로 안내 */
   pay: {
-    callCard: 'https://www.payapp.kr/L/z4lfH4',    // 30분 화상 상담 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)
-    callPaypal: '',  // 30분 화상 상담 20만 원 · 해외 PayPal 결제 링크
+    callCard: 'https://www.payapp.kr/L/z4lfH4',    // 화상 상담 (30분~1시간) 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)
+    callPaypal: '',  // 화상 상담 (30분~1시간) 20만 원 · 해외 PayPal 결제 링크
     krCard: 'https://www.payapp.kr/L/z4lfL9',      // 운영 진단 300만 원 · 국내 카드 결제 링크
     buildCard: 'https://www.payapp.kr/L/z4lfM4',   // 제작 · 팀장님 패키지 1,800만 원 · 국내 카드 결제 링크 (계좌이체 권장)
     paypal: '',      // 운영 진단 300만 원 · 해외 PayPal 결제 링크 (paypal.com/ncp/payment/… 또는 paypal.me/…)
