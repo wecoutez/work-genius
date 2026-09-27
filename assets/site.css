@@ -762,3 +762,4 @@ main>section.how-steps{padding-top:72px}
 main>section.how-steps{padding-top:76px;padding-bottom:40px}
 .how-steps .step{background:#f7f8fa;border-color:transparent}
 main>section.how-flow{padding-top:56px}
+@media (max-width:600px){br.dt{display:none}}

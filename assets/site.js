@@ -159,7 +159,7 @@
   var ppBoxes = $$('.ppbox[data-pp]');
   if (ppBoxes.length && !ko() && S.paypalClientId) {
     var PP = {
-      call: { usd: '150.00', label: 'Video call (30–60 min)' },
+      call: { usd: '150.00', label: 'Video call (30 min)' },
       diagnosis: { usd: '2200.00', label: 'Operations diagnosis' },
       team: { usd: '13000.00', label: 'Team lead package (build)' }
     };
