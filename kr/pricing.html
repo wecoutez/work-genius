@@ -8,7 +8,7 @@
 <link rel="alternate" hreflang="en" href="https://work-genius.com/pricing.html">
 <link rel="alternate" hreflang="ko" href="https://work-genius.com/kr/pricing.html">
 <link rel="preload" href="../assets/fonts/Pretendard.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/site.css?v=202609271800">
+<link rel="stylesheet" href="../assets/site.css?v=202609271900">
 </head>
 <body>
 <header class="top"><div class="in">
@@ -47,10 +47,20 @@
       <h2><span class="en">Video call</span><span class="ko">화상 상담</span></h2>
       <p class="price"><span class="en"><span class="n">$150</span></span><span class="ko"><span class="n">20</span><small>만 원</small></span></p>
       <ul><li><span class="en">30 minutes, demo for your industry</span><span class="ko">30분, 업종별 데모</span></li><li><span class="en">Diagnosis scope and quote</span><span class="ko">진단 범위 · 견적 안내</span></li><li><span class="en">Deducted from the diagnosis</span><span class="ko">진단비에서 차감</span></li></ul>
+      <form class="slot" id="callSlot" novalidate>
+        <span class="sl-t"><span class="en">1. Pick a date</span><span class="ko">1. 날짜 고르기</span></span>
+        <div class="sl-days" role="radiogroup" aria-label="Date"></div>
+        <span class="sl-t"><span class="en">2. Pick a time (Korea time)</span><span class="ko">2. 시간 고르기</span></span>
+        <div class="sl-times" role="radiogroup" aria-label="Time"></div>
+        <span class="sl-t"><span class="en">3. Your details</span><span class="ko">3. 예약자 정보</span></span>
+        <input name="name" autocomplete="name" required placeholder="이름 · 회사" aria-label="Name">
+        <input name="contact" required placeholder="휴대폰 번호" aria-label="Contact">
+        <p class="sl-msg" hidden></p>
+      </form>
       <div class="acts">
-        <a class="btn ko" data-pay="callCard" data-method="card" data-type="call" href="#">카드 결제 <span class="soon" hidden>준비 중</span></a>
-        <a class="btn line ko" href="request.html?type=call&amp;pay=transfer">계좌이체 요청</a>
-        <a class="btn en" data-pay="callPaypal" data-method="paypal" data-type="call" href="#">Pay with PayPal <span class="soon" hidden>soon</span></a>
+        <button type="button" class="btn ko" data-slot="card">카드 결제하고 예약</button>
+        <button type="button" class="btn line ko" data-slot="transfer">계좌이체로 예약</button>
+        <button type="button" class="btn en" data-slot="paypal">Pay with PayPal &amp; book</button>
       </div>
     </div>
     <div class="box" id="diagnosis">
@@ -81,13 +91,6 @@
       </div>
     </div>
   </div>
-  <div class="box bookbox" id="book">
-    <h2><span class="en">Pick a time for your call</span><span class="ko">상담 시간 고르기</span></h2>
-    <div class="book">
-      <iframe id="bookFrame" title="Booking calendar" hidden></iframe>
-      <div class="fb" id="bookFallback"><span class="en">Online booking opens soon.</span><span class="ko">온라인 예약 준비 중이에요.</span> <a href="request.html?type=call"><span class="en">Tell us your times →</span><span class="ko">의뢰서로 시간 알려 주기 →</span></a></div>
-    </div>
-  </div>
   <div class="sub-card">
     <div class="sl"><span class="stag"><span class="en">Optional · after the build</span><span class="ko">선택 · 제작 후</span></span><b class="nm"><span class="en">Monthly edit-request subscription</span><span class="ko">월간 수정건 발생 대응 구독</span></b><span class="ds"><span class="en">Keep improving the site as your work changes. Up to 10 edits a month. Cancel anytime.</span><span class="ko">일이 바뀌면 사이트도 계속 맞춰 가요. 매달 수정 10건까지. 언제든 해지 가능.</span></span></div>
     <p class="price"><span class="en"><span class="n">$360</span><small>/mo</small></span><span class="ko"><span class="n">50</span><small>만 원 / 월</small></span></p>
@@ -102,8 +105,8 @@
     <span class="cp"><span class="en">All example screens are based on sample data.</span><span class="ko">화면 속 예시 이미지는 모두 가상 데이터 기반입니다.</span></span>
     <div id="biz"></div>
   </div></footer>
-<script src="../assets/config.js?v=202609271800"></script>
-<script src="../assets/site.js?v=202609271800"></script>
-<script src="../assets/chat.js?v=202609271800"></script>
+<script src="../assets/config.js?v=202609271900"></script>
+<script src="../assets/site.js?v=202609271900"></script>
+<script src="../assets/chat.js?v=202609271900"></script>
 </body>
 </html>

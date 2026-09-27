@@ -12,6 +12,17 @@ window.SITE = {
      비워 두면 챗봇이 의뢰서로 안내함. 한국어 페이지에서만 보임 */
   kakaoChat: 'https://pf.kakao.com/_zzhxiX/chat',
 
+  /* 가격 페이지 · 화상 상담 예약 시간 (한국 시간)
+     weekday: 평일에 고를 수 있는 시간 · weekend: 토 · 일 (비워 두면 그날은 예약 안 받음)
+     leadDays: 오늘부터 며칠 뒤부터 예약 가능 · days: 며칠치를 보여 줄지 · off: 쉬는 날 ['2026-10-03', …] */
+  callSlots: {
+    weekday: ['19:30', '20:30'],
+    weekend: ['10:00', '11:00', '14:00', '15:00'],
+    leadDays: 2,
+    days: 14,
+    off: []
+  },
+
   /* 30분 화상 상담 예약 페이지 주소 (상담비 결제 후 고르는 곳)
      구글 캘린더 "예약 일정(Appointment schedule)" 공개 링크, 또는 Calendly · Cal.com 링크 */
   bookingUrl: '',

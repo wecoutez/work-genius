@@ -52,6 +52,77 @@
     if (S.bookingUrl) { frame.src = S.bookingUrl; frame.hidden = false; $('#bookFallback').hidden = true; }
   }
 
+  /* 가격 페이지: 화상 상담 날짜 · 시간 고르고 결제까지 */
+  var slot = $('#callSlot');
+  if (slot) {
+    var C = S.callSlots || {}, KOR = ko();
+    var dW = KOR ? ['일', '월', '화', '수', '목', '금', '토'] : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var daysEl = $('.sl-days', slot), timesEl = $('.sl-times', slot), smsg = $('.sl-msg', slot);
+    var pick = { day: null, time: null };
+    if (!KOR) { slot.name.placeholder = 'Name · company'; slot.contact.placeholder = 'Email'; slot.contact.type = 'email'; }
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var iso = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+    var timesFor = function (d) {
+      if ((C.off || []).indexOf(iso(d)) > -1) return [];
+      return (d.getDay() === 0 || d.getDay() === 6 ? C.weekend : C.weekday) || [];
+    };
+    var chip = function (label, sub, on) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'sl-c';
+      b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', 'false');
+      b.innerHTML = sub ? '<small>' + sub + '</small>' + label : label;
+      b.addEventListener('click', function () {
+        $$('.sl-c', b.parentNode).forEach(function (x) { x.setAttribute('aria-checked', 'false'); });
+        b.setAttribute('aria-checked', 'true'); on();
+      });
+      return b;
+    };
+    var drawTimes = function () {
+      timesEl.innerHTML = '';
+      if (!pick.day) { timesEl.innerHTML = '<span class="sl-e">' + (KOR ? '날짜를 먼저 골라 주세요' : 'Pick a date first') + '</span>'; return; }
+      timesFor(pick.day).forEach(function (h) { timesEl.appendChild(chip(h, '', function () { pick.time = h; smsg.hidden = true; })); });
+    };
+    var d0 = new Date(); d0.setHours(0, 0, 0, 0); d0.setDate(d0.getDate() + (C.leadDays == null ? 2 : C.leadDays));
+    for (var i = 0, n = 0; n < (C.days || 14) && i < 60; i++) {
+      var d = new Date(d0); d.setDate(d0.getDate() + i);
+      if (!timesFor(d).length) continue;
+      n++;
+      (function (d) {
+        daysEl.appendChild(chip((d.getMonth() + 1) + '/' + d.getDate(), dW[d.getDay()], function () { pick.day = d; pick.time = null; drawTimes(); smsg.hidden = true; }));
+      })(d);
+    }
+    drawTimes();
+
+    var say = function (t, bad) { smsg.textContent = t; smsg.className = 'sl-msg' + (bad ? ' bad' : ' ok'); smsg.hidden = false; };
+    $$('[data-slot]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var how = b.getAttribute('data-slot');
+        var name = slot.name.value.trim(), contact = slot.contact.value.trim();
+        if (!pick.day || !pick.time) return say(KOR ? '날짜와 시간을 골라 주세요.' : 'Please pick a date and time.', true);
+        if (!name || !contact || (!KOR && !slot.contact.checkValidity())) { (name ? slot.contact : slot.name).focus(); return say(KOR ? '이름과 연락처를 적어 주세요.' : 'Please add your name and email.', true); }
+        var when = iso(pick.day) + ' (' + dW[pick.day.getDay()] + ') ' + pick.time;
+        var payUrl = how === 'card' ? (S.pay || {}).callCard : how === 'paypal' ? (S.pay || {}).callPaypal : '';
+        /* 결제창은 클릭 순간 열어야 팝업 차단을 안 받음 */
+        var win = payUrl ? window.open(payUrl, '_blank') : null;
+        if (payUrl && !win) location.href = payUrl;
+        var data = { type: 'call', start: when, name: name, pay: how, lang: document.documentElement.lang, page: location.href, sentAt: new Date().toISOString(),
+                     note: KOR ? '화상 상담 예약 · 결제 방법: ' + (how === 'card' ? '카드' : '계좌이체') : 'Video call booking · ' + how };
+        data[KOR ? 'phone' : 'email'] = contact;
+        if (S.formEndpoint) {
+          var body = JSON.stringify(data);
+          var sent = navigator.sendBeacon && navigator.sendBeacon(S.formEndpoint, new Blob([body], { type: 'text/plain;charset=utf-8' }));
+          if (!sent) fetch(S.formEndpoint, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body }).catch(function () {});
+        }
+        if (how === 'card' || (how === 'paypal' && payUrl)) {
+          say(KOR ? when + ' 예약 요청을 받았어요. 새 창에서 결제를 마치면 확정 안내를 문자로 드릴게요.' : 'Booking request received for ' + when + ' (Korea time). Finish payment in the new tab and we will confirm by email.');
+        } else if (how === 'paypal') {
+          say('Booking request received for ' + when + ' (Korea time). PayPal is coming soon, so we will email you a payment link.');
+        } else {
+          say(KOR ? when + ' 예약 요청을 받았어요. 계좌 안내와 확정 연락을 문자로 드릴게요.' : 'Booking request received.');
+        }
+      });
+    });
+  }
+
   /* 히어로: 업종을 누르면 예시 화면이 바뀜 (가만히 두면 차례로 넘어감) */
   var fis = $$('button.fi[data-ind]'), dvs = $$('.device .dv'), dev = $('.device');
   if (fis.length && dvs.length) {
