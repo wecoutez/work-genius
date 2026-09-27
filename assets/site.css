@@ -674,3 +674,22 @@ main>section:not(.pg) .hd{margin-bottom:64px}
 .newlead li>span{display:block;margin-top:2px;font-size:14px;color:#9DB4FF;font-weight:700}
 @media (max-width:860px){.newlead{grid-template-columns:1fr;padding:24px 20px;gap:18px}.nl-q b{font-size:21px}}
 html:not([lang="ko"]) .nl-q b{letter-spacing:-.01em}
+
+/* 5주 뒤: 둘러앉아 같은 화면을 보는 다이어그램 */
+.hub{position:relative;aspect-ratio:1.35/1;margin:26px 0 6px}
+.hb-l{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.hb-l line{stroke:var(--blue);stroke-width:.5;stroke-dasharray:1.6 1.4;opacity:.55;vector-effect:non-scaling-stroke;stroke-width:2;animation:hbflow 1.6s linear infinite}
+@keyframes hbflow{to{stroke-dashoffset:-6}}
+.hb-c{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44%;background:#fff;border-radius:16px;padding:8px 8px 12px;box-shadow:0 24px 48px -18px rgba(43,85,240,.55),0 0 0 3px rgba(43,85,240,.18);text-align:center;z-index:1}
+.hb-c img{display:block;width:100%;border-radius:10px;border:1px solid var(--line)}
+.hb-c b{display:block;margin-top:9px;font-size:15px;font-weight:800;color:var(--blue-d)}
+.hb-c small{display:block;font-size:12px;color:var(--ink3);font-weight:600}
+.hb-p{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:5px;z-index:2}
+.hb-p img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 10px 22px -10px rgba(12,22,52,.5)}
+.hb-p span{font-size:12.5px;font-weight:800;color:var(--ink);background:#fff;border-radius:99px;padding:2px 9px;box-shadow:0 4px 10px -6px rgba(12,22,52,.3);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.hb-l line{animation:none}}
+@media (max-width:680px){.hub{aspect-ratio:1/1.05}.hb-c{width:52%}.hb-p img{width:44px;height:44px}.hb-p span{font-size:11.5px}.hb-c b{font-size:13.5px}}
+.hub{aspect-ratio:1.2/1}
+.hb-c{width:36%;padding:6px 6px 10px}
+.hb-c b{font-size:14px;margin-top:7px}
+@media (max-width:680px){.hub{aspect-ratio:1/1.12}.hb-c{width:44%}.hb-c small{display:none}}
