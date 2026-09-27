@@ -47,7 +47,7 @@
 
   var kakao = KO && S.kakaoChat;
   var human = kakao
-    ? { href: kakao, label: t('카카오톡으로 사람과 대화', ''), ext: true }
+    ? { href: kakao, label: t('담당 매니저에게 문의하기', ''), ext: true }
     : { href: 'request.html', label: t('의뢰서로 남기기', 'Leave a request'), ext: false };
 
   /* 화면 만들기 */
