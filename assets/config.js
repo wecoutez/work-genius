@@ -17,7 +17,7 @@ window.SITE = {
   bookingUrl: '',
 
   /* 의뢰서가 저장될 주소: apps-script.txt 를 구글 Apps Script 로 배포한 웹앱 주소 (…/exec) */
-  formEndpoint: '',
+  formEndpoint: 'https://script.google.com/macros/s/AKfycbwFhU6zQ5BcdXBtYmLWH-W5DcEU0z18djLZMmPzmI7WBJIYUW9l-H8sY_TEDrL0cT0N/exec',
 
   /* 결제 링크: 비워 두면 "준비 중"으로 표시되고 의뢰서로 안내 */
   pay: {
