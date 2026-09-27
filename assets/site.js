@@ -52,6 +52,7 @@
     if (S.bookingUrl) { frame.src = S.bookingUrl; frame.hidden = false; $('#bookFallback').hidden = true; }
   }
 
+  var callForm = null;
   /* 가격 페이지: 화상 상담 날짜 · 시간 고르고 결제까지 */
   var slot = $('#callSlot');
   if (slot) {
@@ -97,6 +98,14 @@
     drawTimes();
 
     var say = function (t, bad) { smsg.textContent = t; smsg.className = 'sl-msg' + (bad ? ' bad' : ' ok'); smsg.hidden = false; };
+    /* 영문 PayPal 버튼에서 쓰는 예약 정보 (틀리면 안내하고 null) */
+    callForm = function () {
+      var name = slot.name.value.trim(), contact = slot.contact.value.trim();
+      if (pick.day && pick.day !== 'later' && !pick.time) { say('Pick a time, or choose "Decide later".', true); return null; }
+      if (!name || !contact || !slot.contact.checkValidity()) { (name ? slot.contact : slot.name).focus(); say('Please add your name and email first.', true); return null; }
+      var fixed = pick.day && pick.day !== 'later';
+      return { start: fixed ? iso(pick.day) + ' (' + dW[pick.day.getDay()] + ') ' + pick.time : 'Decide later', name: name, email: contact, fixed: fixed, say: say };
+    };
     $$('[data-slot]').forEach(function (b) {
       b.addEventListener('click', function () {
         var how = b.getAttribute('data-slot');
@@ -126,6 +135,67 @@
         }
       });
     });
+  }
+
+  /* 영문 가격 페이지: PayPal 결제 버튼 (Olive Skin 과 같은 PayPal 계정) */
+  var ppBoxes = $$('.ppbox[data-pp]');
+  if (ppBoxes.length && !ko() && S.paypalClientId) {
+    var PP = {
+      call: { usd: '150.00', label: 'Video call (30–60 min)' },
+      diagnosis: { usd: '2200.00', label: 'Operations diagnosis' },
+      team: { usd: '13000.00', label: 'Team lead package (build)' }
+    };
+    var record = function (o) {
+      if (!S.formEndpoint) return;
+      var body = JSON.stringify(o);
+      var sent = navigator.sendBeacon && navigator.sendBeacon(S.formEndpoint, new Blob([body], { type: 'text/plain;charset=utf-8' }));
+      if (!sent) fetch(S.formEndpoint, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body }).catch(function () {});
+    };
+    var boxMsg = function (box) {
+      var m = box.nextElementSibling && box.nextElementSibling.classList.contains('sl-msg') ? box.nextElementSibling : null;
+      return function (t, bad) { if (!m) return; m.textContent = t; m.className = 'sl-msg en' + (bad ? ' bad' : ' ok'); m.hidden = false; };
+    };
+    var mount = function () {
+      ppBoxes.forEach(function (box) {
+        var kind = box.getAttribute('data-pp'), item = PP[kind]; if (!item) return;
+        var tell = kind === 'call' ? function (t, bad) { var f = $('#callSlot .sl-msg'); f.textContent = t; f.className = 'sl-msg' + (bad ? ' bad' : ' ok'); f.hidden = false; } : boxMsg(box);
+        var info = null;
+        window.paypal.Buttons({
+          style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'pay', height: 48 },
+          onClick: function (data, actions) {
+            if (kind !== 'call') return actions.resolve();
+            info = callForm ? callForm() : null;
+            return info ? actions.resolve() : actions.reject();
+          },
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              intent: 'CAPTURE',
+              purchase_units: [{ description: 'Work Genius · ' + item.label, amount: { currency_code: 'USD', value: item.usd },
+                items: [{ name: item.label, unit_amount: { currency_code: 'USD', value: item.usd }, quantity: '1', category: 'DIGITAL_GOODS' }],
+                custom_id: kind + (info ? ' · ' + info.start : '') }],
+              application_context: { brand_name: 'Work Genius', shipping_preference: 'NO_SHIPPING' }
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (d) {
+              var payer = (d && d.payer) || {}, nm = payer.name ? [payer.name.given_name, payer.name.surname].join(' ') : '';
+              record({ type: kind === 'team' ? 'team' : kind, pay: 'paypal', lang: 'en', page: location.href, sentAt: new Date().toISOString(),
+                name: (info && info.name) || nm, email: (info && info.email) || payer.email_address || '', start: info ? info.start : '',
+                note: 'PayPal paid $' + item.usd + ' · order ' + (d && d.id || data.orderID) + (payer.email_address ? ' · payer ' + payer.email_address : '') });
+              tell(kind === 'call'
+                ? 'Paid, thank you. ' + (info && info.fixed ? 'We will confirm ' + info.start + ' (Korea time) by email.' : 'We will email you to agree a time.')
+                : 'Paid, thank you. We will email you within one business day to plan the next steps.');
+            }).catch(function () { tell('Payment did not go through. Please try again.', true); });
+          },
+          onError: function () { tell('PayPal could not open. Please try again, or send us a request.', true); }
+        }).render(box).catch(function () {});
+      });
+    };
+    var sdk = document.createElement('script');
+    sdk.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(S.paypalClientId) + '&currency=USD&intent=capture&components=buttons&locale=en_US';
+    sdk.onload = function () { if (window.paypal && window.paypal.Buttons) mount(); };
+    sdk.onerror = function () { ppBoxes.forEach(function (b) { b.innerHTML = '<a class="btn" href="request.html?pay=paypal">Send a request</a>'; }); };
+    document.body.appendChild(sdk);
   }
 
   /* 히어로: 업종을 누르면 예시 화면이 바뀜 (가만히 두면 차례로 넘어감) */

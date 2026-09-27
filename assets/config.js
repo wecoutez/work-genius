@@ -30,6 +30,9 @@ window.SITE = {
   /* 의뢰서가 저장될 주소: apps-script.txt 를 구글 Apps Script 로 배포한 웹앱 주소 (…/exec) */
   formEndpoint: 'https://script.google.com/macros/s/AKfycbwFhU6zQ5BcdXBtYmLWH-W5DcEU0z18djLZMmPzmI7WBJIYUW9l-H8sY_TEDrL0cT0N/exec',
 
+  /* 영문 페이지 PayPal 결제 버튼: PayPal Live 앱 Client ID (Olive Skin 과 같은 계정). 비워 두면 의뢰서로 안내 */
+  paypalClientId: 'BAA1E9HIjTbEoenfNLX-VHnrhfM2BlheMWht6mJL-84-MjnHqUoTY8jGhGb6K5asYkDhvkPf-6dZeOkGPU',
+
   /* 결제 링크: 비워 두면 "준비 중"으로 표시되고 의뢰서로 안내 */
   pay: {
     callCard: 'https://www.payapp.kr/L/z4lfH4',    // 화상 상담 (30분~1시간) 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)

@@ -22,7 +22,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preload" href="../assets/fonts/Pretendard.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/site.css?v=202609272100">
+<link rel="stylesheet" href="../assets/site.css?v=202609272110">
 </head>
 <body>
 <header class="top"><div class="in">
@@ -74,7 +74,7 @@
       <div class="acts">
         <button type="button" class="btn ko" data-slot="card">결제하고 예약</button>
         <button type="button" class="btn line ko" data-slot="transfer">계좌이체로 예약</button>
-        <button type="button" class="btn en" data-slot="paypal">Pay with PayPal &amp; book</button>
+        <div class="ppbox en" data-pp="call"></div>
       </div>
     </div>
     <div class="box" id="diagnosis">
@@ -85,7 +85,8 @@
       <div class="acts">
         <a class="btn ko" data-pay="krCard" data-method="card" data-type="diagnosis" href="#">카드 결제 <span class="soon" hidden>준비 중</span></a>
         <a class="btn line ko" href="request.html?type=diagnosis&amp;pay=transfer">계좌이체 요청</a>
-        <a class="btn en" data-pay="paypal" data-method="paypal" data-type="diagnosis" href="#">Pay with PayPal <span class="soon" hidden>soon</span></a>
+        <div class="ppbox en" data-pp="diagnosis"></div>
+        <p class="sl-msg en" hidden></p>
       </div>
     </div>
     <div class="box hl" id="build">
@@ -100,7 +101,10 @@
       <div class="acts">
         <a class="btn ko" href="request.html?type=team&amp;pay=transfer">계좌이체 · 세금계산서 (권장)</a>
         <a class="btn line ko" data-pay="buildCard" data-method="card" data-type="team" href="#">카드 결제 <span class="soon" hidden>준비 중</span></a>
-        <a class="btn en" href="request.html?type=team">Request a quote</a>
+        <p class="rec en">Paid in advance. We suggest a quick call first to confirm the scope.</p>
+        <div class="ppbox en" data-pp="team"></div>
+        <p class="sl-msg en" hidden></p>
+        <a class="btn line en" href="request.html?type=team">Request a quote</a>
         <a class="btn line" href="request.html?type=company"><span class="en">Request an expansion quote</span><span class="ko">확장 패키지 견적 요청</span></a>
       </div>
     </div>
@@ -119,8 +123,8 @@
     <span class="cp"><span class="en">All example screens are based on sample data.</span><span class="ko">화면 속 예시 이미지는 모두 가상 데이터예요.</span></span>
     <div id="biz"></div>
   </div></footer>
-<script src="../assets/config.js?v=202609272100"></script>
-<script src="../assets/site.js?v=202609272100"></script>
-<script src="../assets/chat.js?v=202609272100"></script>
+<script src="../assets/config.js?v=202609272110"></script>
+<script src="../assets/site.js?v=202609272110"></script>
+<script src="../assets/chat.js?v=202609272110"></script>
 </body>
 </html>

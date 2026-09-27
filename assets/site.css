@@ -558,3 +558,4 @@ html:not([lang="ko"]) .btn,html:not([lang="ko"]) .fi,html:not([lang="ko"]) .bf-l
 .sl-days .sl-c.sl-later{border-style:dashed;min-width:auto;padding:6px 12px;align-self:stretch;display:flex;align-items:center;font-size:13px}
 .wgc-human.wgc-book,.wgc-human.wgc-go{background:var(--blue)}
 .wgc-human.wgc-go{margin-top:10px}
+.ppbox{width:100%;min-height:48px;position:relative;z-index:0}
