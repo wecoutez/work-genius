@@ -342,3 +342,10 @@ html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .
   .pnote{text-align:left}
   .pacts{justify-content:flex-start}
 }
+
+/* 히어로: 분야 아이콘 */
+.hero .tag{margin-bottom:14px}
+.fields{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.fi{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 13px;border:1px solid var(--line);border-radius:99px;background:#fff;font-size:14px;font-weight:700;color:var(--ink2)}
+.fi svg{color:var(--blue);flex:none}
+@media (max-width:680px){.fields{gap:5px}.fi{height:30px;padding:0 9px;gap:4px;font-size:13px}.fi svg{width:14px;height:14px}}
