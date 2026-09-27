@@ -51,6 +51,18 @@
     if (S.bookingUrl) { frame.src = S.bookingUrl; frame.hidden = false; $('#bookFallback').hidden = true; }
   }
 
+  /* 확장 다이어그램: 화면에 들어오면 안쪽부터 한 겹씩 */
+  document.documentElement.classList.add('js');
+  var ex = document.querySelector('.expand');
+  if (ex) {
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { ex.classList.add('in'); io.disconnect(); } });
+      }, { threshold: 0.35 });
+      io.observe(ex);
+    } else ex.classList.add('in');
+  }
+
   /* 의뢰서 */
   var form = $('#reqForm');
   if (!form) return;
@@ -88,4 +100,5 @@
                 : 'Requests open shortly. Please try again a little later.', true);
     }
   });
+
 })();
