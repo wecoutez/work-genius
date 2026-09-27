@@ -556,3 +556,5 @@ html:not([lang="ko"]) .logo,html:not([lang="ko"]) .ring .rl,html:not([lang="ko"]
 html:not([lang="ko"]) .price,html:not([lang="ko"]) .stats b{letter-spacing:-.015em}
 html:not([lang="ko"]) .btn,html:not([lang="ko"]) .fi,html:not([lang="ko"]) .bf-l b{letter-spacing:0}
 .sl-days .sl-c.sl-later{border-style:dashed;min-width:auto;padding:6px 12px;align-self:stretch;display:flex;align-items:center;font-size:13px}
+.wgc-human.wgc-book,.wgc-human.wgc-go{background:var(--blue)}
+.wgc-human.wgc-go{margin-top:10px}
