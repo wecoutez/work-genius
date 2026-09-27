@@ -328,3 +328,17 @@ html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .
   .card .s2{display:none}
   footer.foot .cp{margin-left:0}
 }
+
+/* 가격 페이지 모바일 정돈 */
+.pacts{justify-content:center}
+@media (max-width:860px){
+  .n3>.nt,.n2>.nt{align-self:stretch}
+  .n2{padding:26px 20px 22px}
+  .n1{padding:26px 20px 20px}
+  .n2:before{right:16px}.n1:before{left:14px}
+}
+@media (max-width:680px){
+  #pricing .hd{text-align:left;margin-bottom:36px}
+  .pnote{text-align:left}
+  .pacts{justify-content:flex-start}
+}
