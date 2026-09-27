@@ -737,3 +737,6 @@ html:not([lang="ko"]) .hero-ask{letter-spacing:-.01em}
   .hb-says-m>span{font-size:13px;font-weight:800;color:#157347;background:#fff;border-radius:14px 14px 14px 4px;padding:8px 12px;box-shadow:0 10px 22px -12px rgba(12,22,52,.45)}
   .hb-says-m>span:last-child{align-self:flex-end;border-radius:14px 14px 4px 14px}
 }
+.hero-ask{margin:44px 0 14px}
+.hero .fhint{margin-bottom:0}
+@media (max-width:680px){.hero-ask{margin:32px 0 10px}}
