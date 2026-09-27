@@ -659,3 +659,7 @@ main>section:not(.pg) .hd{margin-bottom:64px}
   .cta{margin-top:120px}
   .stats{margin-top:72px}
 }
+.gnote{font-size:14px;font-weight:700;color:var(--ink3)}
+.gnote:before{content:"· ";}
+@media (max-width:680px){.group{flex-wrap:wrap;row-gap:6px}.gnote{flex-basis:100%;font-size:13.5px}.gnote:before{content:""}}
+@media (max-width:680px){.r1s{white-space:normal;line-height:1.35}}
