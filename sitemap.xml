@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.work-genius.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/pricing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/pricing.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/pricing.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/pricing.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/request.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/request.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/request.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/request.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/request.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/request.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/terms.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/terms.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/privacy.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/privacy.html"/>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>
