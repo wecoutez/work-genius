@@ -81,8 +81,10 @@
       human.label + '</a>';
   }
   var BOOK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+  var WON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>';
   function bookLink() {
-    return '<a class="wgc-human wgc-book" href="pricing.html#call">' + BOOK + t('상담 예약하러 가기', 'Book a call') + '</a>';
+    return '<a class="wgc-human wgc-book" href="pricing.html#call">' + BOOK + t('상담 예약하러 가기', 'Book a call') + '</a>' +
+      '<a class="wgc-human wgc-book" href="pricing.html#start">' + WON + t('가격 확인하러 가기', 'See pricing') + '</a>';
   }
   function chips() {
     var w = add('wgc-chips', '');
