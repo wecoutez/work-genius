@@ -300,15 +300,3 @@
 
 })();
 
-/* 팀 매니징 · 사람마다 다른 첫 화면 탭 */
-(function () {
-  document.querySelectorAll('.pz').forEach(function (box) {
-    var bs = box.querySelectorAll('.pz-tabs button'), ss = box.querySelectorAll('.pz-s');
-    bs.forEach(function (b) {
-      b.addEventListener('click', function () {
-        bs.forEach(function (x) { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-        ss.forEach(function (s) { s.hidden = s.getAttribute('data-pz') !== b.getAttribute('data-pz'); });
-      });
-    });
-  });
-})();

@@ -772,11 +772,3 @@ u.ul{text-decoration:underline;text-decoration-color:var(--blue);text-decoration
 .sl-days .sl-c{min-width:0;padding:6px 2px;scroll-snap-align:start}
 .sl-days .sl-c:not(.sl-later){grid-row:2}
 .sl-days .sl-c.sl-later{grid-row:1;grid-column:1/span 6;justify-self:start;padding:8px 14px}
-.pz{margin:16px 0 18px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px 22px 22px}
-.pz-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-.pz-hd>b{font-size:19px;font-weight:800;letter-spacing:-.02em}
-.pz-tabs{display:flex;background:var(--bg,#F3F5FA);border-radius:12px;padding:4px;gap:2px}
-.pz-tabs button{font:inherit;font-size:14px;font-weight:700;border:0;background:none;color:var(--ink2);padding:8px 16px;border-radius:9px;cursor:pointer}
-.pz-tabs button.on{background:var(--ink);color:#fff}
-.pz-shot img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}
-@media (max-width:680px){.pz{padding:16px}.pz-hd>b{font-size:16px}.pz-tabs button{padding:7px 12px;font-size:13px}}
