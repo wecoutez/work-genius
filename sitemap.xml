@@ -70,4 +70,18 @@
     <lastmod>2026-09-27</lastmod>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://www.work-genius.com/how.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/how.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/how.html"/>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/how.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/how.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/how.html"/>
+    <lastmod>2026-09-28</lastmod>
+    <priority>0.7</priority>
+  </url>
 </urlset>
