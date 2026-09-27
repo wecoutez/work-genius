@@ -13,7 +13,7 @@
       k: ['가격', '비용', '얼마', '금액', '견적', '패키지', 'price', 'cost', 'how much', 'quote', 'package'],
       a: t('단계별 금액이에요 (부가세 별도).<br>· 화상 상담 (30분) <b>20만 원</b><br>· 운영 진단 <b>300만 원</b><br>· 팀장님 패키지 <b>1,800만 원~</b><br>· 확장 패키지 <b>3,000만 원~</b><br>· 월간 수정 구독 <b>월 50만 원</b> (10건까지, 선택)<br><br>상담 후 30일 안에 진단을 계약하면 상담비를, 진단 후 60일 안에 제작을 계약하면 진단비를 빼 드려요.',
            'Prices by stage (taxes excluded):<br>· Video call (30 min) <b>$150</b><br>· Operations diagnosis <b>$2,200</b><br>· Team lead package <b>from $13,000</b><br>· Expansion package <b>from $22,000</b><br>· Monthly edit subscription <b>$360/mo</b> (up to 10 edits, optional)<br><br>Book the diagnosis within 30 days of the call and the call fee is deducted; build within 60 days of the diagnosis and the diagnosis fee is deducted.') ,
-      go: ['pricing.html#start', t('가격 페이지로 가기', 'Go to pricing')] },
+      go: ['pricing.html', t('가격 페이지로 가기', 'Go to pricing')] },
     { id: 'process', q: t('어떻게 진행돼요? 기간은요?', 'How does it work, and how long?'),
       k: ['진행', '기간', '얼마나 걸', '일정', '방문', '몇 주', 'process', 'how long', 'timeline', 'weeks', 'visit'],
       a: t('진단부터 오너십 이전까지 <b>5주</b>예요. 모두 온라인으로 진행하고 회사로 방문하지 않아요.<br>· 1주차 운영 진단<br>· 2주차 화면 설계<br>· 3~4주차 고객사 계정 안에서 제작<br>· 5주차 시험 운영 후 교육, 오너십 이전',
@@ -84,7 +84,7 @@
   var WON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>';
   function bookLink() {
     return '<a class="wgc-human wgc-book" href="pricing.html#call">' + BOOK + t('상담 예약하러 가기', 'Book a call') + '</a>' +
-      '<a class="wgc-human wgc-book" href="pricing.html#start">' + WON + t('가격 확인하러 가기', 'See pricing') + '</a>';
+      '<a class="wgc-human wgc-book" href="pricing.html">' + WON + t('가격 확인하러 가기', 'See pricing') + '</a>';
   }
   function chips() {
     var w = add('wgc-chips', '');
