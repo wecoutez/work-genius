@@ -714,3 +714,5 @@ html:not([lang="ko"]) .nl-q b{letter-spacing:-.01em}
 .newlead.ceo li{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}
 .newlead.ceo .nl-who{color:#fff;border-color:rgba(255,255,255,.45)}
 .newlead.ceo .nl-q>span{color:rgba(255,255,255,.82)}
+.bf-fun{margin-top:12px;font-size:15px;font-weight:700;color:var(--ink2);line-height:1.6}
+.bf-up{display:inline-block;font-size:13px;font-weight:800;color:#157347;background:#E3F6EA;border-radius:99px;padding:3px 11px;margin:0 6px 8px 0}
