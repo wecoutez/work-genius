@@ -31,9 +31,9 @@
       link: ['index.html#fit', t('만드는 방식 보기', 'See how we build')] },
     { id: 'pay', q: t('결제는 어떻게 해요?', 'How do we pay?'),
       k: ['결제', '카드', '계좌', '이체', '세금계산서', '페이팔', 'pay', 'card', 'invoice', 'paypal'],
-      a: t('상담비 · 진단비는 카드나 계좌이체로, 제작비와 구독은 세금계산서 발행 후 계좌이체로 받아요. 제작비는 계약 때 50%, 오너십 이전 때 50%예요.',
+      a: t('상담 · 진단 · 제작 모두 카드나 계좌이체로 결제할 수 있어요. 제작비는 세금계산서 발행 후 계좌이체를 권장해요. 제작비는 계약 때 50%, 오너십 이전 때 50%예요.',
            'Clients outside Korea pay with PayPal. The build is paid 50% at contract and 50% at ownership transfer.'),
-      link: ['consult.html', t('상담 · 결제 페이지', 'Consult & pay')] },
+      link: ['pricing.html#start', t('가격 · 결제 보기', 'See pricing')] },
     { id: 'tools', q: t('마이크로소프트를 써도 돼요?', 'We use Microsoft, not Google.'),
       k: ['마이크로소프트', '구글', '엑셀', '슬랙', '팀즈', '도구', 'microsoft', 'google', 'excel', 'slack', 'teams', 'tool'],
       a: t('네. 회사가 이미 쓰는 도구에 맞춰 만들어요. 데일리 업무는 슬랙이나 마이크로소프트 팀즈 채널로 공유할 수 있어요.',
@@ -100,7 +100,7 @@
     var more = x.link ? '<a class="wgc-more" href="' + x.link[0] + '">' + x.link[1] + ' →</a>' : '';
     add('bot', x.a + more);
     add('bot wgc-next', t('다른 것도 궁금하면 아래에서 골라 주세요. 상담은 ', 'Pick another question below, or ') +
-      '<a href="consult.html">' + t('여기서 신청', 'book a call') + '</a>' + t('할 수 있어요.', '.'));
+      '<a href="pricing.html#start">' + t('여기서 신청', 'book a call') + '</a>' + t('할 수 있어요.', '.'));
     chips();
   }
   function match(q) {

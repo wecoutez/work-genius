@@ -44,6 +44,7 @@
   wire('[data-pay="subCard"]', (S.pay || {}).subCard, 'subscription');
   wire('[data-pay="subPaypal"]', (S.pay || {}).subPaypal, 'subscription');
   wire('[data-pay="krCard"]', (S.pay || {}).krCard, 'diagnosis');
+  wire('[data-pay="buildCard"]', (S.pay || {}).buildCard, 'team');
   wire('[data-pay="paypal"]', (S.pay || {}).paypal, 'diagnosis');
   wire('[data-book]', S.bookingUrl, 'call');
   var frame = $('#bookFrame');
