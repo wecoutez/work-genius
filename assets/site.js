@@ -126,7 +126,7 @@
   /* 히어로: 업종을 누르면 예시 화면이 바뀜 (가만히 두면 차례로 넘어감) */
   var fis = $$('button.fi[data-ind]'), dvs = $$('.device .dv'), dev = $('.device');
   if (fis.length && dvs.length) {
-    var cur = 'beauty', timer = null, seen = false;
+    var cur = 'fnb', timer = null, seen = false;
     var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var show = function (ind) {
       cur = ind;
