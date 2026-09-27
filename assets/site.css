@@ -58,7 +58,7 @@ header.top .in{display:flex;align-items:center;gap:28px;height:68px}
 .hero .tag{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--blue);background:var(--blue-soft);padding:7px 14px;border-radius:99px;margin-bottom:24px}
 .hero h1{max-width:1100px;margin:0 auto}
 html[lang="ko"] .hero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.2}
-.hero .sub{max-width:640px;margin:22px auto 0}
+.hero .sub{max-width:720px;margin:22px auto 0}
 .hero .acts{justify-content:center;margin-top:34px}
 .device{max-width:1080px;margin:64px auto 0;background:var(--dark);border-radius:22px;padding:10px;box-shadow:var(--shadow)}
 .device img{border-radius:14px;width:100%}
