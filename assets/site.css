@@ -647,3 +647,15 @@ html:not([lang="ko"]) .btn,html:not([lang="ko"]) .fi,html:not([lang="ko"]) .bf-l
 }
 .bf-r .bf-img{margin-top:34px}
 @media (max-width:680px){.bl-cmt{display:none}.bf-r .bf-img{margin-top:30px}}
+
+/* 메인: 구역 사이 여백 넓히기 */
+main>section:not(.pg){padding-top:176px}
+main>section:not(.pg) .hd{margin-bottom:64px}
+.cta{margin-top:176px}
+.stats{margin-top:104px}
+@media (max-width:680px){
+  main>section:not(.pg){padding-top:120px}
+  main>section:not(.pg) .hd{margin-bottom:44px}
+  .cta{margin-top:120px}
+  .stats{margin-top:72px}
+}
