@@ -21,7 +21,7 @@ window.SITE = {
 
   /* 결제 링크: 비워 두면 "준비 중"으로 표시되고 의뢰서로 안내 */
   pay: {
-    callCard: '',    // 30분 화상 상담 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)
+    callCard: 'https://www.payapp.kr/L/z4lfH4',    // 30분 화상 상담 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)
     callPaypal: '',  // 30분 화상 상담 20만 원 · 해외 PayPal 결제 링크
     krCard: '',      // 운영 진단 300만 원 · 국내 카드 결제 링크
     paypal: '',      // 운영 진단 300만 원 · 해외 PayPal 결제 링크 (paypal.com/ncp/payment/… 또는 paypal.me/…)
