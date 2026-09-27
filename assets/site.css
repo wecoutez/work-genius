@@ -293,6 +293,9 @@ html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .
 .ai img{border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
 @media (max-width:900px){.ana{grid-template-columns:1fr;padding:32px 22px;gap:28px}}
 
+.apps{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.apps span{display:inline-flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 16px}
+.apps img{height:24px;width:auto}
 @media (max-width:1180px){.menu{gap:16px;margin-left:0}header.top .in{gap:20px}}
 @media (max-width:1060px){.menu{gap:12px}.menu a{font-size:14px}.right .btn.sm{padding:0 14px}}
 @media (max-width:900px){.menu{display:none}}
