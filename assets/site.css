@@ -716,3 +716,6 @@ html:not([lang="ko"]) .nl-q b{letter-spacing:-.01em}
 .newlead.ceo .nl-q>span{color:rgba(255,255,255,.82)}
 .bf-fun{margin-top:12px;font-size:15px;font-weight:700;color:var(--ink2);line-height:1.6}
 .bf-up{display:inline-block;font-size:13px;font-weight:800;color:#157347;background:#E3F6EA;border-radius:99px;padding:3px 11px;margin:0 6px 8px 0}
+.hero-ask{font-size:clamp(20px,2.2vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1.4;color:var(--ink2);margin-bottom:22px}
+html:not([lang="ko"]) .hero-ask{letter-spacing:-.01em}
+@media (max-width:680px){.hero-ask{font-size:19px;margin-bottom:16px}}
