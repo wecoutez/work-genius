@@ -763,3 +763,7 @@ main>section.how-steps{padding-top:76px;padding-bottom:40px}
 .how-steps .step{background:#f7f8fa;border-color:transparent}
 main>section.how-flow{padding-top:56px}
 @media (max-width:600px){br.dt{display:none}}
+.hero .tag+.hero-ask{margin-top:14px}
+.hero .acts+.fields{margin-top:60px}
+.hero .fhint+.device{margin-top:22px}
+@media (max-width:680px){.hero .tag+.hero-ask{margin-top:10px}.hero .acts+.fields{margin-top:40px}.hero .fhint+.device{margin-top:16px}}
