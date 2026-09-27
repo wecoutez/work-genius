@@ -8,6 +8,10 @@ window.SITE = {
      (알림 메일은 apps-script.txt 의 NOTIFY 로만 감) */
   email: '',
 
+  /* 챗봇 "사람과 연결" 버튼: 카카오톡 채널 1:1 채팅 링크 (예: https://pf.kakao.com/_xxxxx/chat)
+     비워 두면 챗봇이 의뢰서로 안내함. 한국어 페이지에서만 보임 */
+  kakaoChat: '',
+
   /* 30분 화상 상담 예약 페이지 주소 (상담비 결제 후 고르는 곳)
      구글 캘린더 "예약 일정(Appointment schedule)" 공개 링크, 또는 Calendly · Cal.com 링크 */
   bookingUrl: '',

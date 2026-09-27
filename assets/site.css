@@ -389,3 +389,42 @@ html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .
   .r1s{font-size:12px}
   .ex-cap{text-align:left;font-size:14.5px}
 }
+
+/* 상담 챗봇 */
+.wgc{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:60;font-family:var(--f)}
+.wgc-fab{display:flex;align-items:center;gap:8px;height:54px;padding:0 20px 0 16px;border:0;border-radius:99px;background:var(--blue);color:#fff;font:inherit;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 14px 30px -10px rgba(43,85,240,.65);margin-left:auto}
+.wgc-fab:hover{background:var(--blue-d)}
+.wgc-fab .i-close,.wgc.on .wgc-fab .i-open,.wgc.on .wgc-fl{display:none}
+.wgc.on .wgc-fab .i-close{display:block}
+.wgc.on .wgc-fab{width:54px;padding:0;justify-content:center}
+.wgc-panel{position:absolute;right:0;bottom:66px;width:370px;height:min(580px,calc(100vh - 120px));background:#fff;border-radius:20px;box-shadow:0 30px 70px -20px rgba(12,22,52,.45),0 0 0 1px rgba(12,22,52,.06);display:flex;flex-direction:column;overflow:hidden}
+.wgc-panel[hidden]{display:none}
+.wgc-hd{display:flex;align-items:center;gap:11px;padding:16px 16px 14px 18px;border-bottom:1px solid var(--line2)}
+.wgc-hd i{font-style:normal;width:34px;height:34px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.wgc-hd b{display:block;font-size:15.5px;line-height:1.3}
+.wgc-hd small{display:block;font-size:12.5px;color:var(--ink3);font-weight:600}
+.wgc-x{margin-left:auto;width:34px;height:34px;border:0;border-radius:10px;background:none;color:var(--ink3);cursor:pointer;display:grid;place-items:center}
+.wgc-x:hover{background:var(--bg)}
+.wgc-log{position:relative;flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg);overscroll-behavior:contain}
+.wgc-m{max-width:88%;font-size:14.5px;line-height:1.55;padding:11px 14px;border-radius:16px}
+.wgc-m.bot{background:#fff;color:var(--ink);border-top-left-radius:6px;box-shadow:0 1px 2px rgba(12,22,52,.06)}
+.wgc-m.me{align-self:flex-end;background:var(--blue);color:#fff;border-top-right-radius:6px}
+.wgc-m a{color:var(--blue);font-weight:700}
+.wgc-more{display:table;margin-top:8px}
+.wgc-next{color:var(--ink2)}
+.wgc-chips{max-width:100%;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.wgc-chips button{font:inherit;font-size:13.5px;font-weight:700;color:var(--blue);background:#fff;border:1.5px solid #C9D5F8;border-radius:99px;padding:6px 12px;cursor:pointer;text-align:left}
+.wgc-chips button:hover{border-color:var(--blue)}
+.wgc-human{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:800;text-decoration:none;border-radius:99px;padding:7px 13px;background:var(--ink);color:#fff!important;margin-top:4px}
+.wgc-chips .wgc-human{margin-top:0}
+.wgc-in{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line2);background:#fff}
+.wgc-in input{flex:1;min-width:0;height:42px;border:1.5px solid var(--line);border-radius:12px;padding:0 13px;font:inherit;font-size:16px}
+.wgc-in input:focus{outline:none;border-color:var(--blue)}
+.wgc-in button{width:42px;height:42px;border:0;border-radius:12px;background:var(--blue);color:#fff;display:grid;place-items:center;cursor:pointer;flex:none}
+@media (max-width:680px){
+  .wgc{right:14px;bottom:calc(14px + env(safe-area-inset-bottom))}
+  .wgc-fab{height:50px;padding:0 16px 0 13px;font-size:14px}
+  .wgc.on .wgc-fab{width:50px}
+  .wgc-panel{position:fixed;left:10px;right:10px;bottom:calc(74px + env(safe-area-inset-bottom));width:auto;height:min(560px,calc(100dvh - 150px))}
+}
+@media print{.wgc{display:none}}
