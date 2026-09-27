@@ -617,3 +617,6 @@ html:not([lang="ko"]) .btn,html:not([lang="ko"]) .fi,html:not([lang="ko"]) .bf-l
 .bf-w li{font-size:16px}
 @media (max-width:900px){.bf{gap:14px}.bf-l,.bf-r{padding:26px 20px}}
 @media (max-width:680px){#fit .hd h2{font-size:24px}}
+.bf-ok{margin-top:16px;font-size:20px;font-weight:800;color:var(--blue);letter-spacing:-.02em}
+.stats b{color:var(--ink)}
+.stats div:not(:last-child) b{color:var(--blue)}

@@ -128,7 +128,7 @@
     panel.hidden = !v; fab.setAttribute('aria-expanded', v); root.classList.toggle('on', v);
     if (v && !started) {
       started = true;
-      add('bot', t('안녕하세요! 워크 지니어스예요.<br>가격, 진행 방식, 보안 등 궁금한 걸 골라 주세요.', 'Hi! This is Work Genius.<br>Pick a question about pricing, process, security and more.'));
+      add('bot', t('안녕하세요! 흩어진 자료를 한 화면으로, 워크 지니어스예요.<br>가격, 진행 방식, 보안 등 궁금한 걸 골라 주세요.', 'Hi! This is Work Genius: all your scattered data, on one screen.<br>Pick a question about pricing, process, security and more.'));
       chips();
     }
     if (v && window.matchMedia('(min-width:681px)').matches) input.focus();
