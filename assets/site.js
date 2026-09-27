@@ -49,6 +49,8 @@
   }
   wire('[data-pay="callCard"]', (S.pay || {}).callCard, 'call');
   wire('[data-pay="callPaypal"]', (S.pay || {}).callPaypal, 'call');
+  wire('[data-pay="subCard"]', (S.pay || {}).subCard, 'subscription');
+  wire('[data-pay="subPaypal"]', (S.pay || {}).subPaypal, 'subscription');
   wire('[data-pay="krCard"]', (S.pay || {}).krCard, 'diagnosis');
   wire('[data-pay="paypal"]', (S.pay || {}).paypal, 'diagnosis');
   wire('[data-book]', S.bookingUrl, 'call');
