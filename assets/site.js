@@ -51,6 +51,38 @@
     if (S.bookingUrl) { frame.src = S.bookingUrl; frame.hidden = false; $('#bookFallback').hidden = true; }
   }
 
+  /* 히어로: 업종을 누르면 예시 화면이 바뀜 (가만히 두면 차례로 넘어감) */
+  var fis = $$('button.fi[data-ind]'), dvs = $$('.device .dv'), dev = $('.device');
+  if (fis.length && dvs.length) {
+    var cur = 'beauty', timer = null, seen = false;
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var show = function (ind) {
+      cur = ind;
+      fis.forEach(function (b) { var on = b.getAttribute('data-ind') === ind; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
+      dvs.forEach(function (d) { d.hidden = d.getAttribute('data-ind') !== ind; });
+    };
+    var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
+    fis.forEach(function (b) {
+      b.addEventListener('click', function () {
+        stop(); show(b.getAttribute('data-ind'));
+        var r = dev.getBoundingClientRect();
+        if (r.top > window.innerHeight - 120) dev.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'center' });
+      });
+    });
+    if (!still && 'IntersectionObserver' in window) {
+      var order = fis.map(function (b) { return b.getAttribute('data-ind'); });
+      var hio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting && !timer && !seen) {
+            dvs.forEach(function (d) { $$('img', d).forEach(function (i) { i.loading = 'eager'; }); });
+            timer = setInterval(function () { show(order[(order.indexOf(cur) + 1) % order.length]); }, 3500);
+          } else if (!e.isIntersecting && timer) { stop(); seen = true; }
+        });
+      }, { threshold: 0.25 });
+      hio.observe(dev);
+    }
+  }
+
   /* 확장 다이어그램: 화면에 들어오면 안쪽부터 한 겹씩 */
   document.documentElement.classList.add('js');
   var ex = document.querySelector('.expand');
