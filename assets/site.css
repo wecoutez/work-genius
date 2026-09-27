@@ -663,3 +663,14 @@ main>section:not(.pg) .hd{margin-bottom:64px}
 .gnote:before{content:"· ";}
 @media (max-width:680px){.group{flex-wrap:wrap;row-gap:6px}.gnote{flex-basis:100%;font-size:13.5px}.gnote:before{content:""}}
 @media (max-width:680px){.r1s{white-space:normal;line-height:1.35}}
+
+/* 처음 팀장이 된 분께 */
+.newlead{display:grid;grid-template-columns:1fr 1.25fr;gap:28px;align-items:center;background:var(--ink);color:#fff;border-radius:22px;padding:30px 34px;margin-bottom:18px}
+.nl-q b{display:block;font-size:24px;font-weight:800;line-height:1.35;letter-spacing:-.03em}
+.nl-q>span{display:block;margin-top:10px;font-size:15px;color:rgba(255,255,255,.7);font-weight:600}
+.newlead ul{list-style:none;display:grid;gap:10px}
+.newlead li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 16px}
+.newlead li b{display:block;font-size:15.5px;font-weight:800}
+.newlead li>span{display:block;margin-top:2px;font-size:14px;color:#9DB4FF;font-weight:700}
+@media (max-width:860px){.newlead{grid-template-columns:1fr;padding:24px 20px;gap:18px}.nl-q b{font-size:21px}}
+html:not([lang="ko"]) .nl-q b{letter-spacing:-.01em}
