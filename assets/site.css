@@ -281,7 +281,9 @@ html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .
 .ladder .lg{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink3)}
 .ladder .lg b{display:inline-block;width:12px;height:12px;border-radius:4px;margin-left:8px}
 .ladder .k1{background:var(--blue)}.ladder .k2{background:var(--bg);border:1.5px dashed #B9C5E6}
-/* 캠페인 효율 분석 */
+/* 캠페인 · 프로모션 관리 */
+.ai{position:relative;padding-bottom:70px}
+.ai .s2{position:absolute;right:-12px;bottom:0;width:58%;box-shadow:0 24px 50px -20px rgba(15,26,51,.45)}
 .ana{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center;background:var(--bg);border-radius:28px;padding:56px}
 .ana h2{font-size:clamp(28px,3vw,38px)}
 .ana .sub{font-size:18px}
@@ -291,7 +293,7 @@ html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .
 .asteps b{font-size:17px;font-weight:800}
 .asteps span{font-size:15.5px;color:var(--ink2);line-height:1.45;margin-top:2px}
 .ai img{border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
-@media (max-width:900px){.ana{grid-template-columns:1fr;padding:32px 22px;gap:28px}}
+@media (max-width:900px){.ana{grid-template-columns:1fr;padding:32px 22px;gap:28px}.ai .s2{right:0}}
 
 .apps{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .apps span{display:inline-flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 16px}
