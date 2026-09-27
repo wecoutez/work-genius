@@ -79,6 +79,7 @@
     var drawTimes = function () {
       timesEl.innerHTML = '';
       if (!pick.day) { timesEl.innerHTML = '<span class="sl-e">' + (KOR ? '날짜를 먼저 골라 주세요' : 'Pick a date first') + '</span>'; return; }
+      if (pick.day === 'later') { timesEl.innerHTML = '<span class="sl-e">' + (KOR ? '결제 후 편한 시간을 함께 정해요' : 'We will agree a time with you after booking') + '</span>'; return; }
       timesFor(pick.day).forEach(function (h) { timesEl.appendChild(chip(h, '', function () { pick.time = h; smsg.hidden = true; })); });
     };
     var d0 = new Date(); d0.setHours(0, 0, 0, 0); d0.setDate(d0.getDate() + (C.leadDays == null ? 2 : C.leadDays));
@@ -90,6 +91,9 @@
         daysEl.appendChild(chip((d.getMonth() + 1) + '/' + d.getDate(), dW[d.getDay()], function () { pick.day = d; pick.time = null; drawTimes(); smsg.hidden = true; }));
       })(d);
     }
+    /* 날짜 · 시간은 나중에 정해도 됨 */
+    var later = chip(KOR ? '나중에 정하기' : 'Decide later', '', function () { pick.day = 'later'; pick.time = null; drawTimes(); smsg.hidden = true; });
+    later.classList.add('sl-later'); daysEl.insertBefore(later, daysEl.firstChild);
     drawTimes();
 
     var say = function (t, bad) { smsg.textContent = t; smsg.className = 'sl-msg' + (bad ? ' bad' : ' ok'); smsg.hidden = false; };
@@ -97,9 +101,10 @@
       b.addEventListener('click', function () {
         var how = b.getAttribute('data-slot');
         var name = slot.name.value.trim(), contact = slot.contact.value.trim();
-        if (!pick.day || !pick.time) return say(KOR ? '날짜와 시간을 골라 주세요.' : 'Please pick a date and time.', true);
+        if (pick.day && pick.day !== 'later' && !pick.time) return say(KOR ? '시간을 골라 주세요. 아직 모르면 "나중에 정하기"를 눌러 주세요.' : 'Pick a time, or choose "Decide later".', true);
         if (!name || !contact || (!KOR && !slot.contact.checkValidity())) { (name ? slot.contact : slot.name).focus(); return say(KOR ? '이름과 연락처를 적어 주세요.' : 'Please add your name and email.', true); }
-        var when = iso(pick.day) + ' (' + dW[pick.day.getDay()] + ') ' + pick.time;
+        var fixed = pick.day && pick.day !== 'later';
+        var when = fixed ? iso(pick.day) + ' (' + dW[pick.day.getDay()] + ') ' + pick.time : (KOR ? '나중에 정하기' : 'Decide later');
         var payUrl = how === 'card' ? (S.pay || {}).callCard : how === 'paypal' ? (S.pay || {}).callPaypal : '';
         /* 결제창은 클릭 순간 열어야 팝업 차단을 안 받음 */
         var win = payUrl ? window.open(payUrl, '_blank') : null;
@@ -113,11 +118,11 @@
           if (!sent) fetch(S.formEndpoint, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body }).catch(function () {});
         }
         if (how === 'card' || (how === 'paypal' && payUrl)) {
-          say(KOR ? when + ' 예약 요청을 받았어요. 새 창에서 결제를 마치면 확정 안내를 문자로 드릴게요.' : 'Booking request received for ' + when + ' (Korea time). Finish payment in the new tab and we will confirm by email.');
+          say(KOR ? (fixed ? when + ' 예약 요청을 받았어요. ' : '예약 요청을 받았어요. ') + '새 창에서 결제를 마치면 ' + (fixed ? '확정 안내를' : '시간을 정하는 연락을') + ' 문자로 드릴게요.' : (fixed ? 'Booking request received for ' + when + ' (Korea time). ' : 'Booking request received. ') + 'Finish payment in the new tab and we will ' + (fixed ? 'confirm' : 'agree a time') + ' by email.');
         } else if (how === 'paypal') {
-          say('Booking request received for ' + when + ' (Korea time). PayPal is coming soon, so we will email you a payment link.');
+          say((fixed ? 'Booking request received for ' + when + ' (Korea time). ' : 'Booking request received. ') + 'PayPal is coming soon, so we will email you a payment link' + (fixed ? '.' : ' and agree a time.'));
         } else {
-          say(KOR ? when + ' 예약 요청을 받았어요. 계좌 안내와 확정 연락을 문자로 드릴게요.' : 'Booking request received.');
+          say(KOR ? (fixed ? when + ' 예약 요청을 받았어요. 계좌 안내와 확정 연락을' : '예약 요청을 받았어요. 계좌 안내와 시간 정하는 연락을') + ' 문자로 드릴게요.' : 'Booking request received.');
         }
       });
     });
