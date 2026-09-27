@@ -428,3 +428,14 @@ html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .
   .wgc-panel{position:fixed;left:10px;right:10px;bottom:calc(74px + env(safe-area-inset-bottom));width:auto;height:min(560px,calc(100dvh - 150px))}
 }
 @media print{.wgc{display:none}}
+
+/* 디자인 예시 */
+.dz{max-width:1080px;margin:0 auto;border-radius:24px;padding:12px;background:linear-gradient(135deg,#E6EEEB,#DCE5F4);box-shadow:var(--shadow)}
+.dz img{display:block;width:100%;height:auto;border-radius:16px}
+.dz-cap{text-align:center;margin-top:14px;color:var(--ink3);font-size:14px;font-weight:600}
+.dz-pts{list-style:none;max-width:1080px;margin:36px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dz-pts li{background:var(--bg);border-radius:var(--r);padding:22px 24px}
+.dz-pts b{display:block;font-size:18px;font-weight:800;letter-spacing:-.02em}
+.dz-pts li>span{display:block;margin-top:6px;color:var(--ink2);font-size:15.5px}
+@media (max-width:860px){.dz-pts{grid-template-columns:1fr;gap:12px}}
+@media (max-width:680px){.dz{padding:6px;border-radius:16px}.dz img{border-radius:11px}.dz-cap{text-align:left;font-size:13.5px}}
