@@ -780,3 +780,14 @@ u.ul{text-decoration:underline;text-decoration-color:var(--blue);text-decoration
 .bonus b{display:block;font-size:18px;font-weight:800;letter-spacing:-.02em;margin-top:3px}
 .bonus p{font-size:14.5px;color:var(--ink2);margin-top:5px;line-height:1.55}
 @media (max-width:860px){.bonus{margin:-16px 0 32px;padding:16px}.bonus b{font-size:16px}.bn-ic{width:38px;height:38px}}
+/* 예시 화면을 웹사이트(브라우저 창)처럼 */
+.device{background:#fff;border:1px solid #DDE3EF;border-radius:16px;padding:44px 0 0;position:relative;overflow:hidden;box-shadow:0 40px 80px -30px rgba(17,27,58,.35),0 0 0 6px rgba(255,255,255,.6)}
+.device:before{content:"";position:absolute;left:0;right:0;top:0;height:44px;background:radial-gradient(circle at 22px 22px,#FF5F57 5px,transparent 5.5px),radial-gradient(circle at 40px 22px,#FEBC2E 5px,transparent 5.5px),radial-gradient(circle at 58px 22px,#28C840 5px,transparent 5.5px),#F3F5FA;border-bottom:1px solid #E3E8F1}
+.device:after{content:"🔒  team.ourcompany.com";position:absolute;top:10px;left:50%;transform:translateX(-50%);height:24px;line-height:24px;padding:0 18px;border-radius:8px;background:#fff;border:1px solid #E3E8F1;font-size:12px;font-weight:600;color:#6B7590;white-space:nowrap;width:min(46%,420px);text-align:center}
+.device img{border-radius:0}
+.card .shot{padding-top:58px}
+.card .shot:before{content:"";position:absolute;left:0;right:0;top:26px;height:32px;border-radius:12px 12px 0 0;border:1px solid var(--line);border-bottom:1px solid #E3E8F1;background:radial-gradient(circle at 16px 16px,#FF5F57 4px,transparent 4.5px),radial-gradient(circle at 30px 16px,#FEBC2E 4px,transparent 4.5px),radial-gradient(circle at 44px 16px,#28C840 4px,transparent 4.5px),#F3F5FA}
+.card .shot:after{content:"team.ourcompany.com";position:absolute;top:33px;left:50%;transform:translateX(-50%);height:18px;line-height:18px;padding:0 14px;border-radius:6px;background:#fff;border:1px solid #E3E8F1;font-size:10.5px;font-weight:600;color:#8A93A8;white-space:nowrap}
+.card .shot img{border-radius:0;border-top:0}
+.card.blue .shot:before{border-color:rgba(255,255,255,.35)}
+@media (max-width:680px){.device{padding-top:30px;border-radius:12px}.device:before{height:30px;background:radial-gradient(circle at 14px 15px,#FF5F57 3.5px,transparent 4px),radial-gradient(circle at 26px 15px,#FEBC2E 3.5px,transparent 4px),radial-gradient(circle at 38px 15px,#28C840 3.5px,transparent 4px),#F3F5FA}.device:after{top:6px;height:18px;line-height:18px;font-size:10px;padding:0 10px;width:auto}.card .shot:after{display:none}}
