@@ -791,3 +791,4 @@ u.ul{text-decoration:underline;text-decoration-color:var(--blue);text-decoration
 .card .shot img{border-radius:0;border-top:0}
 .card.blue .shot:before{border-color:rgba(255,255,255,.35)}
 @media (max-width:680px){.device{padding-top:30px;border-radius:12px}.device:before{height:30px;background:radial-gradient(circle at 14px 15px,#FF5F57 3.5px,transparent 4px),radial-gradient(circle at 26px 15px,#FEBC2E 3.5px,transparent 4px),radial-gradient(circle at 38px 15px,#28C840 3.5px,transparent 4px),#F3F5FA}.device:after{top:6px;height:18px;line-height:18px;font-size:10px;padding:0 10px;width:auto}.card .shot:after{display:none}}
+.mid-price{text-align:center;margin:44px 0 0}
