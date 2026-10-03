@@ -853,3 +853,8 @@ u.ul{text-decoration-color:#F2B705;text-decoration-thickness:4px}
 .cb-team>span{margin-left:12px;font-size:14px;font-weight:700;color:var(--ink2)}
 .coach+.fields{margin-top:18px}
 @media (max-width:760px){.coach{margin-top:40px}.cb{grid-template-columns:1fr;padding:16px;gap:14px}.cb-board{grid-template-columns:1fr;padding:14px;gap:10px}.nt{min-height:0;transform:none!important;margin:0!important}.cb-team{grid-column:1}.step-l{font-size:15px}.step-l.s2{margin-top:32px}.cb-lead{flex-direction:row;align-items:center}.cb-lead img{width:56px;height:56px}.cb-lead small{font-size:15px}}
+#blueprint{padding-top:72px}@media (max-width:680px){#blueprint{padding-top:48px}}
+.hero2{background:none;padding-top:0}
+.hero2 .coach{margin-top:72px}
+#blueprint{padding-top:56px;padding-bottom:0}
+@media (max-width:680px){.hero2 .coach{margin-top:48px}#blueprint{padding-top:40px}}
