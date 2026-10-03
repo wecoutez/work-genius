@@ -128,7 +128,7 @@
     panel.hidden = !v; fab.setAttribute('aria-expanded', v); root.classList.toggle('on', v);
     if (v && !started) {
       started = true;
-      add('bot', t('안녕하세요! 우리 팀 전용 코워킹 플랫폼을 만들어 드리는,<br><span style="white-space:nowrap">워크 지니어스예요.</span><br>가격, 진행 방식, 보안 등 궁금한 걸 골라 주세요.', 'Hi! This is Work Genius. We build your team its own co-working platform.<br>Pick a question about pricing, process, security and more.'));
+      add('bot', t('안녕하세요! 팀 매니징 코칭과 전용 플랫폼 구축을 함께 하는,<br><span style="white-space:nowrap">워크 지니어스예요.</span><br>가격, 진행 방식, 보안 등 궁금한 걸 골라 주세요.', 'Hi! This is Work Genius. We coach how your team works and build its own platform.<br>Pick a question about pricing, process, security and more.'));
       chips();
     }
     if (v && window.matchMedia('(min-width:681px)').matches) input.focus();
