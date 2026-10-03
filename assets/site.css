@@ -875,3 +875,26 @@ u.ul{text-decoration-color:#F2B705;text-decoration-thickness:4px}
 @media (max-width:760px){.cb-mem{grid-column:1}.mbs{gap:8px}.mb{padding:12px}.mb-h img{width:36px;height:36px}.mb-h{flex-wrap:wrap}.mb dl{grid-template-columns:1fr;gap:2px}.mb dt{font-size:11.5px}.mb dd{margin-bottom:4px;font-size:12.5px}}
 .cb-mt .rp{font-style:normal;margin-left:auto;font-size:13px;font-weight:800;background:var(--dark);color:#FFD23F;padding:6px 12px;border-radius:99px}
 @media (max-width:760px){.cb-mt .rp{margin-left:0}}
+.cb-mem{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:center;margin-top:6px}
+.cb-mt2 b{display:block;font-size:19px;font-weight:800;letter-spacing:-.02em;color:var(--ink);line-height:1.4}
+.cb-mt2 p{margin-top:8px;font-size:14.5px;color:var(--ink2);line-height:1.55}
+.docs{position:relative;height:210px}
+.doc{position:absolute;top:10px;width:205px;height:190px;background:#fff;border:1px solid #E9DFC6;border-radius:10px;padding:14px;box-shadow:0 18px 30px -18px rgba(60,45,0,.45)}
+.doc.d0{left:0;transform:rotate(-5deg)}
+.doc.d1{left:23%;transform:rotate(-1.5deg);top:4px}
+.doc.d2{left:46%;transform:rotate(2deg)}
+.doc.d3{left:auto;right:0;transform:rotate(5deg);top:2px}
+.doc:before{content:"";position:absolute;top:0;right:0;width:22px;height:22px;background:linear-gradient(225deg,#FFFBEB 50%,#F1E6C8 50%);border-bottom-left-radius:6px}
+.dh{display:flex;align-items:center;gap:9px}
+.dh img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.dh b{display:block;font-size:13.5px}
+.dh small{display:block;font-size:11px;font-weight:700;color:#8A5A00}
+.dl{margin-top:12px;display:grid;gap:6px}
+.dl u{display:block;height:6px;border-radius:9px;background:#EFE9DC;text-decoration:none}
+.dl u.s{width:62%}
+.dbars{margin-top:12px;display:grid;gap:6px}
+.dbars i{display:block;height:9px;border-radius:9px;background:linear-gradient(90deg,#FFD23F,#F2B705)}
+@media (max-width:900px){.cb-mem{grid-template-columns:1fr;gap:14px}}
+@media (max-width:760px){.cb-mem{grid-column:1}.docs{height:190px}.doc{width:150px;height:170px;padding:11px}.doc.d1{left:20%}.doc.d2{left:40%}.dh img{width:28px;height:28px}.dh b{font-size:12px}}
+.docs{height:230px;margin-bottom:6px}
+@media (max-width:760px){.docs{height:200px;margin:0 10px 8px}.doc{width:52%;height:175px}.doc.d0{left:0}.doc.d1{left:16%}.doc.d2{left:32%}.doc.d3{right:0}.doc.d0 .dh div,.doc.d1 .dh div,.doc.d2 .dh div{visibility:hidden}}
