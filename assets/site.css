@@ -900,3 +900,9 @@ u.ul{text-decoration-color:#F2B705;text-decoration-thickness:4px}
 @media (max-width:760px){.docs{height:200px;margin:0 10px 8px}.doc{width:52%;height:175px}.doc.d0{left:0}.doc.d1{left:16%}.doc.d2{left:32%}.doc.d3{right:0}.doc.d0 .dh div,.doc.d1 .dh div,.doc.d2 .dh div{visibility:hidden}}
 #voices{padding-top:72px;padding-bottom:8px}@media (max-width:680px){#voices{padding-top:48px}}
 .logo i{background:var(--dark);color:#FFD23F}
+.hero-ask .ko,.hero-ask .en{background:none;padding:0}
+.hero-ask{color:#8A5A00;font-size:clamp(20px,2.2vw,26px)}
+.hero h1+.duo{margin-top:30px}
+.hero .duo+.acts{margin-top:30px}
+#voices .hd h2{margin-top:0}
+#voices{padding-top:120px}@media (max-width:680px){#voices{padding-top:80px}}
