@@ -799,3 +799,4 @@ u.ul{text-decoration:underline;text-decoration-color:var(--blue);text-decoration
 .duo>i{font-style:normal;font-weight:800;color:var(--ink3);font-size:18px}
 @media (max-width:680px){.duo{gap:6px;margin-top:16px}.duo>span{font-size:13.5px;padding:6px 12px 6px 6px}.duo>span>b{width:21px;height:21px;font-size:11.5px}}
 .right .btn.sm+.btn.sm{margin-left:8px}
+.sl-days .sl-c:not(.sl-later){white-space:nowrap;font-size:13px;letter-spacing:-.02em}
