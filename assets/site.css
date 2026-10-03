@@ -831,3 +831,25 @@ u.ul{text-decoration-color:#F2B705;text-decoration-thickness:4px}
 .vnote b{background:linear-gradient(transparent 60%,#FFE27A 60%);color:var(--ink)}
 @media (max-width:1000px){.vgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.vgrid{grid-template-columns:1fr;gap:12px}.vc:nth-child(even){transform:none}.vc blockquote{font-size:16px}.vnote{margin-top:28px;font-size:15.5px}}
+/* 히어로: 코칭 먼저 */
+.coach{max-width:1080px;margin:56px auto 0;text-align:left}
+.step-l{display:inline-flex;align-items:center;gap:10px;font-size:17px;font-weight:800;color:var(--ink)}
+.step-l b{width:28px;height:28px;border-radius:50%;background:#FFD23F;display:grid;place-items:center;font-size:14px}
+.step-l.s2{margin-top:44px;display:flex;justify-content:center}
+.coach>.step-l:first-child{display:flex;justify-content:center;margin-bottom:18px}
+.cb{position:relative;background:#FFFBEB;border:1px solid #EFE0B4;border-radius:24px;padding:28px;display:grid;grid-template-columns:280px 1fr;gap:20px 28px;box-shadow:0 30px 60px -40px rgba(60,45,0,.5)}
+.cb-lead{display:flex;flex-direction:column;align-items:flex-start;gap:14px;background:#fff;border-radius:18px;padding:20px;border:1px solid var(--line)}
+.cb-lead img{width:72px;height:72px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px #FFE27A}
+.cb-lead b{display:block;font-size:14px;color:#6B4500}
+.cb-lead small{display:block;font-size:17px;font-weight:800;line-height:1.45;color:var(--ink);margin-top:6px;letter-spacing:-.02em}
+.cb-board{background:#fff;border-radius:18px;border:1px solid var(--line);padding:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start;background-image:radial-gradient(#EFE6CF 1px,transparent 1px);background-size:16px 16px}
+.nt{background:#FFE27A;border-radius:6px;padding:16px 14px 18px;font-size:13.5px;font-weight:600;color:#3D320F;box-shadow:0 10px 18px -12px rgba(60,45,0,.6);transform:rotate(-2deg);min-height:108px}
+.nt.cn2{background:#FFD0A8;transform:rotate(1.5deg);margin-top:14px}
+.nt.cn3{background:#CDEBC9;transform:rotate(-1deg)}
+.nt em{display:block;font-style:normal;font-size:16px;font-weight:800;margin-bottom:8px;color:var(--ink)}
+.cb-team{grid-column:1/3;display:flex;align-items:center;gap:0;padding-left:4px}
+.cb-team img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:3px solid #FFFBEB;margin-left:-10px}
+.cb-team img:first-child{margin-left:0}
+.cb-team>span{margin-left:12px;font-size:14px;font-weight:700;color:var(--ink2)}
+.coach+.fields{margin-top:18px}
+@media (max-width:760px){.coach{margin-top:40px}.cb{grid-template-columns:1fr;padding:16px;gap:14px}.cb-board{grid-template-columns:1fr;padding:14px;gap:10px}.nt{min-height:0;transform:none!important;margin:0!important}.cb-team{grid-column:1}.step-l{font-size:15px}.step-l.s2{margin-top:32px}.cb-lead{flex-direction:row;align-items:center}.cb-lead img{width:56px;height:56px}.cb-lead small{font-size:15px}}
