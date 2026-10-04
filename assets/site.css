@@ -1139,3 +1139,6 @@ h1+.sub{color:#B8B09E}
 html{background:#0B0A08}
 html,body{overflow-x:clip}
 @media (max-width:1100px){header.top .right .btn.line{display:none}}
+.hero h1 .q{color:#FFD23F}
+.hero .tag+h1{margin-top:18px}
+@media (max-width:680px){html:not([lang="ko"]) .hero h1.h1-long{font-size:24px}}
