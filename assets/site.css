@@ -906,3 +906,10 @@ u.ul{text-decoration-color:#F2B705;text-decoration-thickness:4px}
 .hero .duo+.acts{margin-top:30px}
 #voices .hd h2{margin-top:0}
 #voices{padding-top:120px}@media (max-width:680px){#voices{padding-top:80px}}
+.ceo-kh{max-width:1040px;margin:-24px auto 18px;background:var(--dark);color:#fff;border-radius:18px;padding:22px 24px;display:grid;grid-template-columns:1fr auto;gap:16px 24px;align-items:center;text-align:left}
+.ck-t em{display:block;font-style:normal;font-size:12.5px;font-weight:800;color:#FFD23F}
+.ck-t b{display:block;font-size:17px;font-weight:800;margin-top:4px;letter-spacing:-.02em;line-height:1.45}
+.ceo-kh ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,auto);gap:8px}
+.ceo-kh li{background:rgba(255,210,63,.14);border:1px solid rgba(255,210,63,.4);color:#FFE58A;font-size:14px;font-weight:800;padding:8px 14px;border-radius:10px;white-space:nowrap}
+.ceo-kh+.bonus{margin-top:0}
+@media (max-width:860px){.ceo-kh{grid-template-columns:1fr;margin:-12px 0 14px;padding:18px}.ck-t b{font-size:15.5px}.ceo-kh ul{grid-template-columns:1fr 1fr}.ceo-kh li{font-size:13px;padding:8px 10px;white-space:normal}}
