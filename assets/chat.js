@@ -1,7 +1,7 @@
 /* =====================================================================
    워크 지니어스 · 상담 챗봇
    정해진 답변만 보여 줘요 (AI 아님). 답변 내용은 아래 QA 에서 고치면 됩니다.
-   "사람과 연결"은 config.js 의 kakaoChat 링크로 이어지고, 비어 있으면 의뢰서로 안내해요.
+   "사람과 연결"은 config.js 의 kakaoChat 링크로 이어지고, 비어 있으면 사전 질문지로 안내해요.
    ===================================================================== */
 (function () {
   var S = window.SITE || {};
@@ -48,7 +48,7 @@
   var kakao = KO && S.kakaoChat;
   var human = kakao
     ? { href: kakao, label: t('담당 매니저에게 문의하기', ''), ext: true }
-    : { href: 'request.html', label: t('의뢰서로 남기기', 'Leave a request'), ext: false };
+    : { href: 'request.html', label: t('사전 질문지로 남기기', 'Leave a request'), ext: false };
 
   /* 화면 만들기 */
   var root = document.createElement('div');
@@ -57,7 +57,7 @@
     '<button class="wgc-fab" type="button" aria-expanded="false" aria-controls="wgcPanel">' +
       '<svg class="i-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>' +
       '<svg class="i-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>' +
-      '<span class="wgc-fl">' + t('문의하기', 'Ask us') + '</span>' +
+      '<span class="wgc-fl">' + t('담당 매니저와 이야기하기', 'Talk to your manager') + '</span>' +
     '</button>' +
     '<div class="wgc-panel" id="wgcPanel" role="dialog" aria-label="' + t('워크 지니어스 상담', 'Work Genius chat') + '" hidden>' +
       '<div class="wgc-hd"><i>W</i><div><b>' + t('워크 지니어스', 'Work Genius') + '</b><small>' + t('자주 묻는 질문에 바로 답해 드려요', 'Quick answers to common questions') + '</small></div>' +

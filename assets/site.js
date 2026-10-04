@@ -293,7 +293,7 @@
     } else {
       /* 저장 주소가 아직 없을 때: 보내지 않고 안내만 */
       btn.disabled = false;
-      show(ko() ? '의뢰서 접수를 준비하고 있어요. 잠시 뒤 다시 시도해 주세요.'
+      show(ko() ? '사전 질문지 접수를 준비하고 있어요. 잠시 뒤 다시 시도해 주세요.'
                 : 'Requests open shortly. Please try again a little later.', true);
     }
   });

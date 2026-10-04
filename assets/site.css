@@ -1072,3 +1072,13 @@ main>section.pb-end{padding-bottom:8px}@media (max-width:760px){.pb-c svg{max-wi
 @media (max-width:760px){.pb-parts,.pb-facts{grid-template-columns:1fr}.pb-pg{min-height:190px}}
 main>section.pb-sec:last-of-type{padding-bottom:8px}.pb-pg .pb-lock{top:60%}
 .pb-art{max-width:400px;margin:0 auto}
+/* private / boutique tone */
+.hero h1,.hd h2,.cta h2,.pb-cover h1,.pg h1{font-family:"Noto Serif KR","Pretendard",serif;font-weight:700;letter-spacing:-.03em}
+.few{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:8px 0;margin-top:22px}
+.few li{font-size:14px;font-weight:700;color:var(--ink2);padding:0 16px;position:relative}
+.few li+li:before{content:"";position:absolute;left:0;top:50%;width:1px;height:12px;background:#D9C58A;transform:translateY(-50%)}
+.few li:first-child{color:#8A5A00}
+#pricing .few,.pg .few{justify-content:flex-start;margin-top:18px}
+#pricing .few li:first-child,.pg .few li:first-child{padding-left:0}
+@media (max-width:680px){.few{flex-direction:column;align-items:center;gap:6px}.few li{padding:0}.few li+li:before{display:none}#pricing .few,.pg .few{align-items:flex-start}}
+#pricing .few,.pg .few{justify-content:center}#pricing .few li:first-child,.pg .few li:first-child{padding-left:16px}@media (max-width:680px){#pricing .few,.pg .few{align-items:center}#pricing .few li:first-child,.pg .few li:first-child{padding-left:0}}
