@@ -1131,3 +1131,8 @@ h1+.sub{color:#B8B09E}
 .vnote b{color:#FFD23F;background:linear-gradient(transparent 88%,#FFD23F 88%)}
 .bp-t{color:#F4EFE3}
 .bf-a em{color:#FFD23F}.ring.r4 .rl{color:#6B4500}
+.hero h1.h1-long{font-size:clamp(30px,4.2vw,54px);line-height:1.22;max-width:1000px}
+.hero-ask{font-size:20px}
+@media (max-width:680px){.hero h1.h1-long{font-size:27px;line-height:1.3;word-break:keep-all}.hero-ask{font-size:17px}}
+.br-m{display:none}
+@media (max-width:680px){.br-m{display:inline}html:not([lang="ko"]) .hero h1.h1-long{font-size:25px}}
