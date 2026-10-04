@@ -1144,3 +1144,22 @@ html,body{overflow-x:clip}
 @media (max-width:680px){html:not([lang="ko"]) .hero h1.h1-long{font-size:24px}}
 :root{color-scheme:only light}
 header.top{background:#0B0A08;backdrop-filter:none;-webkit-backdrop-filter:none}
+/* story: gray now -> yellow after 5 weeks */
+.story{background:linear-gradient(180deg,#ECEAE5 0%,#F4F1EA 30%,#FFF6D6 70%,#FFE27A 100%);border-color:#E2DCCB}
+.s-team{display:flex}
+.s-team img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:3px solid #ECEAE5;margin-left:-10px}
+.s-team img:first-child{margin-left:0}
+.s-who img{box-shadow:none}
+.stl:before{border-left:0;width:2px;background:linear-gradient(180deg,#BDB6A8,#E8D9A8 50%,#F2B705)}
+.stl li:before{box-shadow:none}
+.stl li.s0:before{background:#BDB6A8}
+.stl li.s1:before{background:#D8CDAE}
+.stl li.s2:before{background:#EBD58A}
+.stl li.s3:before{background:#FFD23F}
+.stl li.s4:before{background:#F2B705;width:20px;height:20px;left:-30px;top:1px}
+.stl li.s0 em{color:#8F8775}
+.stl li.s0 p{background:#F3F1EC;color:#6B6253}
+.stl li.s4 p:not(.s-end){background:#fff;border-color:#F2B705}
+.stl li.s4 em{color:#6B4500}
+.s-end{color:#211E17!important}
+@media (max-width:680px){.stl li.s4:before{left:-26px}}
