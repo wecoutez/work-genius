@@ -1050,3 +1050,24 @@ html:not([lang="ko"]) .cb-photo,html:not([lang="ko"]) .rc-photo{display:none}
 .pb-sec .hd{padding-top:0}
 .pb-sum{margin-top:0}main>section.pb-sec .hd{margin-bottom:32px}main>section.pb-sec{padding:72px 0}@media (max-width:760px){main>section.pb-sec{padding:52px 0}}
 main>section.pb-end{padding-bottom:8px}@media (max-width:760px){.pb-c svg{max-width:220px}}
+.pb-p{position:relative}
+.pb-p .bl{display:block;height:9px;border-radius:5px;background:#EDE3C8;flex:1;filter:blur(1.5px)}
+.pb-p i:nth-of-type(2) .bl{flex:.7}.pb-p i:nth-of-type(4) .bl{flex:.8}.pb-p i:nth-of-type(5) .bl{flex:.6}
+.pb-lock{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:var(--dark);color:#FFD23F;font-size:12.5px;font-weight:800;padding:7px 13px;border-radius:99px;box-shadow:0 10px 20px -10px rgba(0,0,0,.5)}
+.pb-parts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pb-part h3{margin-top:16px;font-size:18px;font-weight:800;letter-spacing:-.02em}
+.pb-part p{margin-top:6px;font-size:15px;color:var(--ink2)}
+.pb-part em{display:inline-block;margin-top:10px;font-style:normal;font-size:13px;font-weight:800;color:#6B4500;background:#FFF3C7;padding:5px 11px;border-radius:99px}
+.pb-pg{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:11px;min-height:220px;box-shadow:0 18px 30px -24px rgba(60,45,0,.45)}
+.pb-pg small{font-size:11px;font-weight:900;letter-spacing:.08em;color:#8A5A00}
+.pb-pg b{font-size:20px;font-weight:900;margin-bottom:4px}
+.pb-pg i{display:flex;gap:8px;filter:blur(2px)}
+.pb-pg u{height:9px;border-radius:5px;background:#EDE3C8;flex:1}
+.pb-pg u.w{flex:.6;background:#F3EBD6}
+.pb-part:nth-child(2) .pb-pg{background:#FFFBEB;border-color:#EFE0B4}
+.pb-facts{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.pb-facts li{background:var(--bg);border-radius:16px;padding:16px 20px;font-size:14.5px;color:var(--ink2)}
+.pb-facts b{display:block;font-size:17px;font-weight:900;color:var(--ink);margin-bottom:2px}
+.pb-why{margin-top:20px;max-width:none}
+@media (max-width:760px){.pb-parts,.pb-facts{grid-template-columns:1fr}.pb-pg{min-height:190px}}
+main>section.pb-sec:last-of-type{padding-bottom:8px}.pb-pg .pb-lock{top:60%}
