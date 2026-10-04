@@ -989,7 +989,7 @@ html:not([lang="ko"]) .cb-photo,html:not([lang="ko"]) .rc-photo{display:none}
 .pb-cover h1{margin-top:18px;font-size:44px;line-height:1.25;letter-spacing:-.035em;font-weight:900;color:var(--ink)}
 .pb-cover p{margin-top:16px;font-size:17px;line-height:1.65;color:var(--ink2);max-width:460px}
 .pb-note{display:inline-block;margin-top:18px;font-size:14px;font-weight:700;color:#6B4500;border-bottom:2px solid #FFD23F}
-.pb-train{width:100%;height:auto;display:block}
+.pb-art{width:100%;height:auto;display:block}
 .pb-sec{padding:72px 0}
 .pb-sec.alt{background:var(--bg)}
 .pb-sec .hd{margin-bottom:28px}
@@ -1071,3 +1071,4 @@ main>section.pb-end{padding-bottom:8px}@media (max-width:760px){.pb-c svg{max-wi
 .pb-why{margin-top:20px;max-width:none}
 @media (max-width:760px){.pb-parts,.pb-facts{grid-template-columns:1fr}.pb-pg{min-height:190px}}
 main>section.pb-sec:last-of-type{padding-bottom:8px}.pb-pg .pb-lock{top:60%}
+.pb-art{max-width:400px;margin:0 auto}
