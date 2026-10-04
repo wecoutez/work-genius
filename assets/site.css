@@ -1163,3 +1163,9 @@ header.top{background:#0B0A08;backdrop-filter:none;-webkit-backdrop-filter:none}
 .stl li.s4 em{color:#6B4500}
 .s-end{color:#211E17!important}
 @media (max-width:680px){.stl li.s4:before{left:-26px}}
+.vlab{text-align:center;font-size:14px;font-weight:800;color:#FFD23F;margin:0 0 14px;letter-spacing:.02em}
+.vgrid+.vlab{margin-top:56px}
+.vgrid.vmem{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px;margin-left:auto;margin-right:auto}
+.vmem .vc:nth-child(even){transform:none}
+.vmem .vc{background:#FFF3C7;border-color:#F2D77A}
+@media (max-width:600px){.vgrid.vmem{grid-template-columns:1fr}.vgrid+.vlab{margin-top:36px}}
