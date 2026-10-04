@@ -84,4 +84,18 @@
     <lastmod>2026-09-28</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.work-genius.com/playbook.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/playbook.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/playbook.html"/>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/playbook.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/playbook.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/playbook.html"/>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
