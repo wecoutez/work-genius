@@ -1125,7 +1125,9 @@ h1{color:#F4EFE3}
 .faq summary{color:#F4EFE3}.faq details{border-color:#2E2A20}.faq details p,.faq details div{color:#C9C1AE}
 .pb-cover h1{color:#211E17}
 .pb-part h3{color:#F4EFE3}
-.sub{color:#B8B09E}
-.req .sub,.cb .sub{color:var(--ink2)}
+h1+.sub{color:#B8B09E}
 .page .doc{background:#fff;border-radius:20px;padding:12px 36px 32px}
 @media (max-width:680px){.page .doc{padding:6px 20px 24px}}
+.vnote b{color:#FFD23F;background:linear-gradient(transparent 88%,#FFD23F 88%)}
+.bp-t{color:#F4EFE3}
+.bf-a em{color:#FFD23F}.ring.r4 .rl{color:#6B4500}
