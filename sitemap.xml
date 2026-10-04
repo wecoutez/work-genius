@@ -84,4 +84,18 @@
     <lastmod>2026-09-28</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.work-genius.com/features.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/features.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/features.html"/>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.work-genius.com/kr/features.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.work-genius.com/features.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.work-genius.com/kr/features.html"/>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
