@@ -954,3 +954,4 @@ html:not([lang="ko"]) .cb-photo,html:not([lang="ko"]) .rc-photo{display:none}
 .pk-m{margin-top:auto;padding-top:22px;color:#FFD23F;font-weight:800;font-size:14.5px}
 #faqm .faq{max-width:820px;margin:0 auto}
 @media (max-width:860px){.fw{grid-template-columns:1fr;gap:10px}.fw li{padding:20px}.fw p{font-size:16.5px}.pk2{grid-template-columns:1fr}.pk-s b{font-size:19px}}
+#feat-top+#compare{padding-top:64px}
