@@ -117,7 +117,7 @@
     setTimeout(function () {
       if (x) answer(x);
       else {
-        add('bot', t('그 질문엔 제가 정확히 답하기 어려워요. 담당자에게 바로 물어봐 주세요.', "I can't answer that one accurately. Please ask our team directly.") + '<br>' + humanLink());
+        add('bot', t('그 질문은 담당 매니저에게 바로 전달했어요. 답을 받을 연락처(휴대폰 또는 이메일)를 남겨 주시면 직접 연락드릴게요.', 'We have passed your question to our team. Leave a phone number or email and we will get back to you.') + '<br>' + humanLink());
         chips();
       }
       /* 질문이 위에 오게 스크롤해서 답변을 처음부터 읽게 */
@@ -136,9 +136,19 @@
   fab.onclick = function () { open(panel.hidden); };
   root.querySelector('.wgc-x').onclick = function () { open(false); fab.focus(); };
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { open(false); fab.focus(); } });
+  /* 입력창에 직접 쓴 질문은 사전 질문지와 같은 곳(구글 시트 + 알림 메일)으로 보냄 */
+  var sentN = 0;
+  function report(q, x) {
+    if (!S.formEndpoint || sentN >= 20) return;
+    sentN++;
+    var body = JSON.stringify({ type: 'chat', name: t('챗봇 방문자', 'Chatbot visitor'), note: q, message: q,
+      matched: x ? x.id : '', lang: document.documentElement.lang, page: location.href, sentAt: new Date().toISOString() });
+    var ok = navigator.sendBeacon && navigator.sendBeacon(S.formEndpoint, new Blob([body], { type: 'text/plain;charset=utf-8' }));
+    if (!ok) fetch(S.formEndpoint, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body }).catch(function () {});
+  }
   form.onsubmit = function (e) {
     e.preventDefault();
     var q = input.value.trim(); if (!q) return;
-    input.value = ''; ask(q);
+    input.value = ''; report(q, match(q)); ask(q);
   };
 })();
