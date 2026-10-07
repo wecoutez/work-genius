@@ -1169,3 +1169,5 @@ header.top{background:#0B0A08;backdrop-filter:none;-webkit-backdrop-filter:none}
 .vmem .vc:nth-child(even){transform:none}
 .vmem .vc{background:#FFF3C7;border-color:#F2D77A}
 @media (max-width:600px){.vgrid.vmem{grid-template-columns:1fr}.vgrid+.vlab{margin-top:36px}}
+.ceo-kh ul{grid-template-columns:repeat(3,auto)}
+@media (max-width:860px){.ceo-kh ul{display:flex;flex-wrap:wrap}}
