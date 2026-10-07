@@ -38,7 +38,7 @@ window.SITE = {
     callCard: 'https://www.payapp.kr/L/z4lfH4',    // 화상 상담 (30분) 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)
     callPaypal: '',  // 화상 상담 (30분) 20만 원 · 해외 PayPal 결제 링크
     krCard: 'https://www.payapp.kr/L/z4lfL9',      // 운영 진단 300만 원 · 국내 카드 결제 링크
-    buildCard: 'https://www.payapp.kr/L/z4lfM4',   // 제작 · 팀장님 패키지 1,800만 원 · 국내 카드 결제 링크 (계좌이체 권장)
+    buildCard: 'https://www.payapp.kr/L/z4lfM4',   // 제작 · 팀장님 패키지 국내 카드 결제 링크 (지금은 사이트에 표시 안 함 · 견적 문의로 받음)
     paypal: '',      // 운영 진단 300만 원 · 해외 PayPal 결제 링크 (paypal.com/ncp/payment/… 또는 paypal.me/…)
     subCard: '',     // 월 구독 50만 원 · 국내 카드 정기결제 링크 (페이앱 정기결제 등)
     subPaypal: ''    // 월 구독 50만 원 · PayPal 구독(Subscriptions) 결제 링크

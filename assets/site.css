@@ -1171,3 +1171,7 @@ header.top{background:#0B0A08;backdrop-filter:none;-webkit-backdrop-filter:none}
 @media (max-width:600px){.vgrid.vmem{grid-template-columns:1fr}.vgrid+.vlab{margin-top:36px}}
 .ceo-kh ul{grid-template-columns:repeat(3,auto)}
 @media (max-width:860px){.ceo-kh ul{display:flex;flex-wrap:wrap}}
+.price .n.ask{font-size:30px;letter-spacing:-.02em}
+.pk2 .price .n.ask{font-size:24px}
+@media (max-width:680px){.price .n.ask{font-size:24px}.pk2 .price .n.ask{font-size:20px}}
+.pk2 .price .n.ask{font-size:20px;white-space:nowrap}
