@@ -1305,3 +1305,6 @@ header.top .btn:not(.line){background:var(--tx);color:#FFD23F}
 .hero:not(.hero2){background:radial-gradient(360px 300px at 8% 18%,rgba(255,255,255,.6),transparent 70%),radial-gradient(320px 300px at 94% 92%,rgba(255,240,170,.9),transparent 70%),linear-gradient(180deg,#FFD84F 0%,#FFCF33 100%)}
 .hero h1 .q{text-decoration:none;background:linear-gradient(transparent 82%,#E01E5A 82%,#E01E5A 92%,transparent 92%);padding:0 2px}
 @media (max-width:680px){.hero h1 .q{display:inline-block;margin-bottom:8px;line-height:1.15}}
+/* rounded yellow hero card */
+.hero:not(.hero2){margin:16px 16px 0;border-radius:32px}
+@media (max-width:680px){.hero:not(.hero2){margin:10px 10px 0;border-radius:24px}}
