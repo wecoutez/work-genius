@@ -1308,3 +1308,6 @@ header.top .btn:not(.line){background:var(--tx);color:#FFD23F}
 /* rounded yellow hero card */
 .hero:not(.hero2){margin:16px 16px 0;border-radius:32px}
 @media (max-width:680px){.hero:not(.hero2){margin:10px 10px 0;border-radius:24px}}
+.hero h1 .q{background:none;position:relative;display:inline-block;padding:0}
+.hero h1 .q:after{content:"";position:absolute;left:2px;right:2px;bottom:-.1em;height:5px;border-radius:99px;background:#E01E5A}
+@media (max-width:680px){.hero h1 .q{margin-bottom:14px}.hero h1 .q:after{height:4px;bottom:-.14em}}
