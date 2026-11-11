@@ -1370,3 +1370,9 @@ html[lang] .hero h1.h1-g{font-size:clamp(44px,6.4vw,84px);line-height:1.1}
 html[lang] .hero h1.h1-g{font-size:clamp(40px,5vw,70px)}
 @media (max-width:960px){.hero:not(.hero2)>.in{grid-template-columns:1fr;gap:32px}.hero:not(.hero2):after{left:auto;right:-110px}}
 @media (max-width:680px){.hg-pic{border-radius:18px}html[lang] .hero h1.h1-g{font-size:40px}html:not([lang="ko"]) .hero h1.h1-g{font-size:36px}}
+/* ===== consistent side gaps: every wide block lines up with the .in content edge ===== */
+.hero:not(.hero2){max-width:1112px;margin:16px auto 0;width:calc(100% - 48px)}
+.hero:not(.hero2)>.in{padding:0 56px}
+.coach,.device,.nest,.stp,.sub-card{max-width:none}
+@media (max-width:860px){.hero:not(.hero2)>.in{padding:0 32px}}
+@media (max-width:680px){.hero:not(.hero2){width:calc(100% - 48px);margin-top:12px}.hero:not(.hero2)>.in{padding:0 22px}}
