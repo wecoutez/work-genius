@@ -35,8 +35,8 @@ window.SITE = {
 
   /* 결제 링크: 비워 두면 "준비 중"으로 표시되고 의뢰서로 안내 */
   pay: {
-    callCard: 'https://www.payapp.kr/L/z4lfH4',    // 화상 상담 (30분) 20만 원 · 국내 카드 결제 링크 (페이앱 · 토스페이먼츠 링크페이 등)
-    callPaypal: '',  // 화상 상담 (30분) 20만 원 · 해외 PayPal 결제 링크
+    callCard: 'https://www.payapp.kr/L/z4lfH4',    // 화상 상담은 지금 무료 · 사이트에서 쓰지 않음 (예전: 20만 원 국내 카드 결제 링크) (페이앱 · 토스페이먼츠 링크페이 등)
+    callPaypal: '',  // 화상 상담은 지금 무료 · 사이트에서 쓰지 않음
     krCard: 'https://www.payapp.kr/L/z4lfL9',      // 운영 진단 300만 원 · 국내 카드 결제 링크
     buildCard: 'https://www.payapp.kr/L/z4lfM4',   // 제작 · 팀장님 패키지 국내 카드 결제 링크 (지금은 사이트에 표시 안 함 · 견적 문의로 받음)
     paypal: '',      // 운영 진단 300만 원 · 해외 PayPal 결제 링크 (paypal.com/ncp/payment/… 또는 paypal.me/…)

@@ -227,7 +227,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);outline-of
 .tot{position:absolute;left:26px;bottom:18px;font-size:15px;font-weight:800;color:#fff;opacity:.95}
 .n2:before,.n1:before{position:absolute;top:-11px;font-size:12px;font-weight:800;padding:3px 10px;border-radius:99px}
 html[lang="ko"] .n2:before{content:"제작비에 포함"}html:not([lang="ko"]) .n2:before{content:"Included in the build"}
-html[lang="ko"] .n1:before{content:"진단비에 포함"}html:not([lang="ko"]) .n1:before{content:"Included in the diagnosis"}
+html[lang="ko"] .n1:before{content:"무료"}html:not([lang="ko"]) .n1:before{content:"Free"}
 .n2:before{background:var(--ink);color:#fff;right:22px}
 .n1:before{background:var(--blue);color:#fff;left:18px}
 .n2,.n1{position:relative}

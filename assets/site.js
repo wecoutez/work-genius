@@ -137,14 +137,16 @@
         var win = payUrl ? window.open(payUrl, '_blank') : null;
         if (payUrl && !win) location.href = payUrl;
         var data = { type: 'call', start: when, name: name, pay: how, lang: document.documentElement.lang, page: location.href, sentAt: new Date().toISOString(),
-                     note: KOR ? '화상 상담 예약 · 결제 방법: ' + (how === 'card' ? '카드' : '계좌이체') : 'Video call booking · ' + how };
+                     note: how === 'free' ? (KOR ? '무료 화상 상담 예약' : 'Free video call booking') : (KOR ? '화상 상담 예약 · 결제 방법: ' + (how === 'card' ? '카드' : '계좌이체') : 'Video call booking · ' + how) };
         data[KOR ? 'phone' : 'email'] = contact;
         if (S.formEndpoint) {
           var body = JSON.stringify(data);
           var sent = navigator.sendBeacon && navigator.sendBeacon(S.formEndpoint, new Blob([body], { type: 'text/plain;charset=utf-8' }));
           if (!sent) fetch(S.formEndpoint, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: body }).catch(function () {});
         }
-        if (how === 'card' || (how === 'paypal' && payUrl)) {
+        if (how === 'free') {
+          say(KOR ? (fixed ? when + ' 무료 상담 예약 요청을 받았어요. 확정 연락을' : '무료 상담 예약 요청을 받았어요. 시간을 정하는 연락을') + ' 문자로 드릴게요.' : (fixed ? 'Free call requested for ' + pick.time.show + '. We will confirm by email.' : 'Free call requested. We will email you to agree a time.'));
+        } else if (how === 'card' || (how === 'paypal' && payUrl)) {
           say(KOR ? (fixed ? when + ' 예약 요청을 받았어요. ' : '예약 요청을 받았어요. ') + '새 창에서 결제를 마치면 ' + (fixed ? '확정 안내를' : '시간을 정하는 연락을') + ' 문자로 드릴게요.' : (fixed ? 'Booking request received for ' + pick.time.show + '. ' : 'Booking request received. ') + 'Finish payment in the new tab and we will ' + (fixed ? 'confirm' : 'agree a time') + ' by email.');
         } else if (how === 'paypal') {
           say((fixed ? 'Booking request received for ' + pick.time.show + '. ' : 'Booking request received. ') + 'PayPal is coming soon, so we will email you a payment link' + (fixed ? '.' : ' and agree a time.'));
